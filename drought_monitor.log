@@ -1,0 +1,1399 @@
+2025-08-14 10:34:28 [INFO] Pathos available for parallel processing
+2025-08-14 10:34:28 [INFO] Starting drought monitoring and outlook generation...
+2025-08-14 10:34:28 [INFO] Found 1 forecast files:
+2025-08-14 10:34:28 [INFO]  0: p_atmos_q5_pr_s_maq5_pumedian_20250701_rt.nc
+2025-08-14 10:34:28 [INFO] 
+===== Processing file 1/1: p_atmos_q5_pr_s_maq5_pumedian_20250701_rt.nc =====
+2025-08-14 10:34:28 [INFO] Loading CDI data...
+2025-08-14 10:34:28 [INFO] Loading NetCDF file: /Volumes/data/nacp/results/netcdf/cdi_1.nc
+2025-08-14 10:34:29 [INFO] Preprocessing CDI data...
+2025-08-14 10:34:29 [INFO] Loading rainfall forecast data...
+2025-08-14 10:34:29 [INFO] Loading NetCDF file: /Volumes/data/do/static/file/p_atmos_q5_pr_s_maq5_pumedian_20250701_rt.nc
+2025-08-14 10:34:29 [INFO] Preprocessing rainfall data...
+2025-08-14 10:34:29 [INFO] Finding appropriate CDI time index...
+2025-08-14 10:34:29 [INFO] Finding CDI time index for target date: 2025-06
+2025-08-14 10:34:29 [INFO] First available CDI date: 1998-04
+2025-08-14 10:34:29 [INFO] Last available CDI date: 2025-07
+2025-08-14 10:34:29 [INFO] Found exact match at index 320: 2025-06
+2025-08-14 10:34:29 [INFO] 
+================================================================================
+2025-08-14 10:34:29 [INFO] CALCULATION DETAILS:
+2025-08-14 10:34:29 [INFO] Rain forecast file: p_atmos_q5_pr_s_maq5_pumedian_20250701_rt.nc
+2025-08-14 10:34:29 [INFO] Rain forecast date: 2025-07
+2025-08-14 10:34:29 [INFO] CDI offset applied: -1 months
+2025-08-14 10:34:29 [INFO] CDI date used: 2025-06 (index 320)
+2025-08-14 10:34:29 [INFO] Output 1-month: 2025-07_outlook_1month.nc
+2025-08-14 10:34:29 [INFO] Output 3-month: 2025-07_outlook_3month.nc
+2025-08-14 10:34:29 [INFO] ================================================================================
+
+2025-08-14 10:34:29 [INFO] Extracting CDI data slice...
+2025-08-14 10:34:34 [INFO] Extracting data slice from cdi, shape: (681, 841, 322)
+2025-08-14 10:34:34 [INFO] Using time index 320 for 3D data
+2025-08-14 10:34:34 [INFO] Creating CDI DataFrame...
+2025-08-14 10:34:34 [INFO] Creating dataframe from grid data, shape: (681, 841)
+2025-08-14 10:34:34 [INFO] Created dataframe with 572721 rows
+2025-08-14 10:34:34 [INFO] 
+=== Processing 1-month outlook ===
+2025-08-14 10:34:34 [INFO] Extracting data slice from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2025-08-14 10:34:34 [INFO] Using bin 1, time index 0 for 4D data
+2025-08-14 10:34:34 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2025-08-14 10:34:34 [INFO] Created dataframe with 612226 rows
+2025-08-14 10:34:34 [INFO] Processing 1-month outlook
+2025-08-14 10:34:34 [INFO] CDI DataFrame shape: (572721, 3)
+2025-08-14 10:34:34 [INFO] Rain DataFrame shape: (612226, 3)
+2025-08-14 10:34:34 [INFO] Merging dataframes...
+2025-08-14 10:34:34 [INFO] Merged DataFrame shape: (572721, 4)
+2025-08-14 10:34:34 [INFO] Dropping NaN values...
+2025-08-14 10:34:34 [INFO] DataFrame after dropping NaNs: (273451, 4)
+2025-08-14 10:34:34 [INFO] Classifying drought conditions...
+2025-08-14 10:34:34 [INFO] Processing batch 1/28
+2025-08-14 10:34:37 [INFO] Processing batch 2/28
+2025-08-14 10:34:39 [INFO] Processing batch 3/28
+2025-08-14 10:34:41 [INFO] Processing batch 4/28
+2025-08-14 10:34:44 [INFO] Processing batch 5/28
+2025-08-14 10:34:46 [INFO] Processing batch 6/28
+2025-08-14 10:34:49 [INFO] Processing batch 7/28
+2025-08-14 10:34:51 [INFO] Processing batch 8/28
+2025-08-14 10:34:54 [INFO] Processing batch 9/28
+2025-08-14 10:34:56 [INFO] Processing batch 10/28
+2025-08-14 10:34:58 [INFO] Processing batch 11/28
+2025-08-14 10:35:01 [INFO] Processing batch 12/28
+2025-08-14 10:35:03 [INFO] Processing batch 13/28
+2025-08-14 10:35:06 [INFO] Processing batch 14/28
+2025-08-14 10:35:08 [INFO] Processing batch 15/28
+2025-08-14 10:35:11 [INFO] Processing batch 16/28
+2025-08-14 10:35:13 [INFO] Processing batch 17/28
+2025-08-14 10:35:15 [INFO] Processing batch 18/28
+2025-08-14 10:35:18 [INFO] Processing batch 19/28
+2025-08-14 10:35:20 [INFO] Processing batch 20/28
+2025-08-14 10:35:23 [INFO] Processing batch 21/28
+2025-08-14 10:35:25 [INFO] Processing batch 22/28
+2025-08-14 10:35:28 [INFO] Processing batch 23/28
+2025-08-14 10:35:30 [INFO] Processing batch 24/28
+2025-08-14 10:35:33 [INFO] Processing batch 25/28
+2025-08-14 10:35:35 [INFO] Processing batch 26/28
+2025-08-14 10:35:37 [INFO] Processing batch 27/28
+2025-08-14 10:35:40 [INFO] Processing batch 28/28
+2025-08-14 10:35:41 [INFO] Classification complete. Processed 273451 data points.
+2025-08-14 10:35:41 [INFO] Creating output DataFrame...
+2025-08-14 10:35:41 [INFO] Creating output dataset...
+2025-08-14 10:35:41 [INFO] Creating output dataset with shape: (681, 841)
+2025-08-14 10:35:52 [INFO] Saving output to NetCDF...
+2025-08-14 10:35:52 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/1_months/offset-1/2025-07_outlook_1month.nc
+2025-08-14 10:35:53 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/1_months/offset-1/2025-07_outlook_1month.nc
+2025-08-14 10:35:53 [INFO] Value counts for 1-month outlook:
+2025-08-14 10:35:53 [INFO] Value counts:
+2025-08-14 10:35:53 [INFO]   Value: 1.0, Count: 184323
+2025-08-14 10:35:53 [INFO]   Value: 2.0, Count: 36
+2025-08-14 10:35:53 [INFO]   Value: 3.0, Count: 30419
+2025-08-14 10:35:53 [INFO]   Value: 4.0, Count: 58380
+2025-08-14 10:35:53 [INFO]   Value: 5.0, Count: 293
+2025-08-14 10:35:53 [INFO] 
+=== Processing 3-month outlook ===
+2025-08-14 10:35:53 [INFO] Calculating 3-month average from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2025-08-14 10:35:53 [INFO] Taking average of first three time slices
+2025-08-14 10:35:53 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2025-08-14 10:35:53 [INFO] Created dataframe with 612226 rows
+2025-08-14 10:35:53 [INFO] Processing 3-month average outlook
+2025-08-14 10:35:53 [INFO] CDI DataFrame shape: (572721, 3)
+2025-08-14 10:35:53 [INFO] Rain DataFrame shape: (612226, 3)
+2025-08-14 10:35:53 [INFO] Merging dataframes...
+2025-08-14 10:35:53 [INFO] Merged DataFrame shape: (572721, 4)
+2025-08-14 10:35:53 [INFO] Dropping NaN values...
+2025-08-14 10:35:53 [INFO] DataFrame after dropping NaNs: (273451, 4)
+2025-08-14 10:35:53 [INFO] Classifying drought conditions...
+2025-08-14 10:35:53 [INFO] Processing batch 1/28
+2025-08-14 10:35:55 [INFO] Processing batch 2/28
+2025-08-14 10:35:58 [INFO] Processing batch 3/28
+2025-08-14 10:36:00 [INFO] Processing batch 4/28
+2025-08-14 10:36:03 [INFO] Processing batch 5/28
+2025-08-14 10:36:05 [INFO] Processing batch 6/28
+2025-08-14 10:36:08 [INFO] Processing batch 7/28
+2025-08-14 10:36:10 [INFO] Processing batch 8/28
+2025-08-14 10:36:13 [INFO] Processing batch 9/28
+2025-08-14 10:36:15 [INFO] Processing batch 10/28
+2025-08-14 10:36:17 [INFO] Processing batch 11/28
+2025-08-14 10:36:20 [INFO] Processing batch 12/28
+2025-08-14 10:36:22 [INFO] Processing batch 13/28
+2025-08-14 10:36:25 [INFO] Processing batch 14/28
+2025-08-14 10:36:27 [INFO] Processing batch 15/28
+2025-08-14 10:36:30 [INFO] Processing batch 16/28
+2025-08-14 10:36:32 [INFO] Processing batch 17/28
+2025-08-14 10:36:35 [INFO] Processing batch 18/28
+2025-08-14 10:36:37 [INFO] Processing batch 19/28
+2025-08-14 10:36:39 [INFO] Processing batch 20/28
+2025-08-14 10:36:42 [INFO] Processing batch 21/28
+2025-08-14 10:36:44 [INFO] Processing batch 22/28
+2025-08-14 10:36:47 [INFO] Processing batch 23/28
+2025-08-14 10:36:49 [INFO] Processing batch 24/28
+2025-08-14 10:36:52 [INFO] Processing batch 25/28
+2025-08-14 10:36:54 [INFO] Processing batch 26/28
+2025-08-14 10:36:57 [INFO] Processing batch 27/28
+2025-08-14 10:36:59 [INFO] Processing batch 28/28
+2025-08-14 10:37:00 [INFO] Classification complete. Processed 273451 data points.
+2025-08-14 10:37:00 [INFO] Creating output DataFrame...
+2025-08-14 10:37:00 [INFO] Creating output dataset...
+2025-08-14 10:37:00 [INFO] Creating output dataset with shape: (681, 841)
+2025-08-14 10:37:12 [INFO] Saving output to NetCDF...
+2025-08-14 10:37:12 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/3_months/offset-1/2025-07_outlook_3month.nc
+2025-08-14 10:37:12 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/3_months/offset-1/2025-07_outlook_3month.nc
+2025-08-14 10:37:12 [INFO] Value counts for 3-month average outlook:
+2025-08-14 10:37:12 [INFO] Value counts:
+2025-08-14 10:37:12 [INFO]   Value: 1.0, Count: 205825
+2025-08-14 10:37:12 [INFO]   Value: 3.0, Count: 8917
+2025-08-14 10:37:12 [INFO]   Value: 4.0, Count: 58687
+2025-08-14 10:37:12 [INFO]   Value: 5.0, Count: 22
+2025-08-14 10:37:12 [INFO] Generating 1_month drought outlook map...
+2025-08-14 10:37:12 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2025-08-14 10:37:13 [INFO] Saving map to /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-07.jpg
+2025-08-14 10:37:16 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-07.jpg
+2025-08-14 10:37:16 [INFO] Generating 3_months drought outlook map...
+2025-08-14 10:37:16 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2025-08-14 10:37:17 [INFO] Saving map to /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-07.jpg
+2025-08-14 10:37:20 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-07.jpg
+2025-08-14 10:37:20 [INFO] Generating rainfall forecast map...
+2025-08-14 10:37:24 [INFO] Rainfall forecast map saved: /Volumes/data/do/static/result/maps/forecast/offset-1/rainfall-forecast_2025-07.jpg
+2025-08-14 10:37:24 [INFO] Drought monitoring and outlook generation completed.
+2025-09-04 19:14:32 [INFO] Pathos available for parallel processing
+2025-09-04 19:14:32 [INFO] Starting drought monitoring and outlook generation...
+2025-09-04 19:14:32 [INFO] Found 1 forecast files:
+2025-09-04 19:14:32 [INFO]  0: p_atmos_q5_pr_s_maq5_pumedian_20250801_rt.nc
+2025-09-04 19:14:32 [INFO] 
+===== Processing file 1/1: p_atmos_q5_pr_s_maq5_pumedian_20250801_rt.nc =====
+2025-09-04 19:14:32 [INFO] Loading CDI data...
+2025-09-04 19:14:32 [INFO] Loading NetCDF file: /Users/sabinmaharjan/Downloads/cdi_1.nc
+2025-09-04 19:14:33 [INFO] Preprocessing CDI data...
+2025-09-04 19:14:33 [INFO] Loading rainfall forecast data...
+2025-09-04 19:14:33 [INFO] Loading NetCDF file: /Volumes/data/do/static/file/p_atmos_q5_pr_s_maq5_pumedian_20250801_rt.nc
+2025-09-04 19:14:33 [INFO] Preprocessing rainfall data...
+2025-09-04 19:14:33 [INFO] Finding appropriate CDI time index...
+2025-09-04 19:14:33 [INFO] Finding CDI time index for target date: 2025-07
+2025-09-04 19:14:33 [INFO] First available CDI date: 1998-04
+2025-09-04 19:14:33 [INFO] Last available CDI date: 2025-07
+2025-09-04 19:14:33 [INFO] Found exact match at index 321: 2025-07
+2025-09-04 19:14:33 [INFO] 
+================================================================================
+2025-09-04 19:14:33 [INFO] CALCULATION DETAILS:
+2025-09-04 19:14:33 [INFO] Rain forecast file: p_atmos_q5_pr_s_maq5_pumedian_20250801_rt.nc
+2025-09-04 19:14:33 [INFO] Rain forecast date: 2025-08
+2025-09-04 19:14:33 [INFO] CDI offset applied: -1 months
+2025-09-04 19:14:33 [INFO] CDI date used: 2025-07 (index 321)
+2025-09-04 19:14:33 [INFO] Output 1-month: 2025-08_outlook_1month.nc
+2025-09-04 19:14:33 [INFO] Output 3-month: 2025-08_outlook_3month.nc
+2025-09-04 19:14:33 [INFO] ================================================================================
+
+2025-09-04 19:14:33 [INFO] Extracting CDI data slice...
+2025-09-04 19:14:37 [INFO] Extracting data slice from cdi, shape: (681, 841, 322)
+2025-09-04 19:14:37 [INFO] Using time index 321 for 3D data
+2025-09-04 19:14:37 [INFO] Creating CDI DataFrame...
+2025-09-04 19:14:37 [INFO] Creating dataframe from grid data, shape: (681, 841)
+2025-09-04 19:14:37 [INFO] Created dataframe with 572721 rows
+2025-09-04 19:14:37 [INFO] 
+=== Processing 1-month outlook ===
+2025-09-04 19:14:37 [INFO] Extracting data slice from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2025-09-04 19:14:37 [INFO] Using bin 1, time index 0 for 4D data
+2025-09-04 19:14:37 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2025-09-04 19:14:37 [INFO] Created dataframe with 612226 rows
+2025-09-04 19:14:37 [INFO] Processing 1-month outlook
+2025-09-04 19:14:37 [INFO] CDI DataFrame shape: (572721, 3)
+2025-09-04 19:14:37 [INFO] Rain DataFrame shape: (612226, 3)
+2025-09-04 19:14:37 [INFO] Merging dataframes...
+2025-09-04 19:14:37 [INFO] Merged DataFrame shape: (572721, 4)
+2025-09-04 19:14:37 [INFO] Dropping NaN values...
+2025-09-04 19:14:37 [INFO] DataFrame after dropping NaNs: (273463, 4)
+2025-09-04 19:14:37 [INFO] Classifying drought conditions...
+2025-09-04 19:14:37 [INFO] Processing batch 1/28
+2025-09-04 19:14:39 [INFO] Processing batch 2/28
+2025-09-04 19:14:42 [INFO] Processing batch 3/28
+2025-09-04 19:14:45 [INFO] Processing batch 4/28
+2025-09-04 19:14:47 [INFO] Processing batch 5/28
+2025-09-04 19:14:50 [INFO] Processing batch 6/28
+2025-09-04 19:14:52 [INFO] Processing batch 7/28
+2025-09-04 19:14:54 [INFO] Processing batch 8/28
+2025-09-04 19:14:57 [INFO] Processing batch 9/28
+2025-09-04 19:14:59 [INFO] Processing batch 10/28
+2025-09-04 19:15:02 [INFO] Processing batch 11/28
+2025-09-04 19:15:04 [INFO] Processing batch 12/28
+2025-09-04 19:15:07 [INFO] Processing batch 13/28
+2025-09-04 19:15:09 [INFO] Processing batch 14/28
+2025-09-04 19:15:11 [INFO] Processing batch 15/28
+2025-09-04 19:15:14 [INFO] Processing batch 16/28
+2025-09-04 19:15:16 [INFO] Processing batch 17/28
+2025-09-04 19:15:19 [INFO] Processing batch 18/28
+2025-09-04 19:15:21 [INFO] Processing batch 19/28
+2025-09-04 19:15:23 [INFO] Processing batch 20/28
+2025-09-04 19:15:26 [INFO] Processing batch 21/28
+2025-09-04 19:15:28 [INFO] Processing batch 22/28
+2025-09-04 19:15:31 [INFO] Processing batch 23/28
+2025-09-04 19:15:33 [INFO] Processing batch 24/28
+2025-09-04 19:15:35 [INFO] Processing batch 25/28
+2025-09-04 19:15:38 [INFO] Processing batch 26/28
+2025-09-04 19:15:40 [INFO] Processing batch 27/28
+2025-09-04 19:15:43 [INFO] Processing batch 28/28
+2025-09-04 19:15:43 [INFO] Classification complete. Processed 273463 data points.
+2025-09-04 19:15:43 [INFO] Creating output DataFrame...
+2025-09-04 19:15:44 [INFO] Creating output dataset...
+2025-09-04 19:15:44 [INFO] Creating output dataset with shape: (681, 841)
+2025-09-04 19:15:55 [INFO] Saving output to NetCDF...
+2025-09-04 19:15:55 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/1_months/offset-1/2025-08_outlook_1month.nc
+2025-09-04 19:15:56 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/1_months/offset-1/2025-08_outlook_1month.nc
+2025-09-04 19:15:56 [INFO] Value counts for 1-month outlook:
+2025-09-04 19:15:56 [INFO] Value counts:
+2025-09-04 19:15:56 [INFO]   Value: 1.0, Count: 254586
+2025-09-04 19:15:56 [INFO]   Value: 2.0, Count: 707
+2025-09-04 19:15:56 [INFO]   Value: 3.0, Count: 15003
+2025-09-04 19:15:56 [INFO]   Value: 4.0, Count: 3156
+2025-09-04 19:15:56 [INFO]   Value: 5.0, Count: 11
+2025-09-04 19:15:56 [INFO] 
+=== Processing 3-month outlook ===
+2025-09-04 19:15:56 [INFO] Calculating 3-month average from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2025-09-04 19:15:56 [INFO] Taking average of first three time slices
+2025-09-04 19:15:56 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2025-09-04 19:15:56 [INFO] Created dataframe with 612226 rows
+2025-09-04 19:15:56 [INFO] Processing 3-month average outlook
+2025-09-04 19:15:56 [INFO] CDI DataFrame shape: (572721, 3)
+2025-09-04 19:15:56 [INFO] Rain DataFrame shape: (612226, 3)
+2025-09-04 19:15:56 [INFO] Merging dataframes...
+2025-09-04 19:15:56 [INFO] Merged DataFrame shape: (572721, 4)
+2025-09-04 19:15:56 [INFO] Dropping NaN values...
+2025-09-04 19:15:56 [INFO] DataFrame after dropping NaNs: (273463, 4)
+2025-09-04 19:15:56 [INFO] Classifying drought conditions...
+2025-09-04 19:15:56 [INFO] Processing batch 1/28
+2025-09-04 19:15:58 [INFO] Processing batch 2/28
+2025-09-04 19:16:01 [INFO] Processing batch 3/28
+2025-09-04 19:16:03 [INFO] Processing batch 4/28
+2025-09-04 19:16:06 [INFO] Processing batch 5/28
+2025-09-04 19:16:08 [INFO] Processing batch 6/28
+2025-09-04 19:16:11 [INFO] Processing batch 7/28
+2025-09-04 19:16:13 [INFO] Processing batch 8/28
+2025-09-04 19:16:16 [INFO] Processing batch 9/28
+2025-09-04 19:16:18 [INFO] Processing batch 10/28
+2025-09-04 19:16:20 [INFO] Processing batch 11/28
+2025-09-04 19:16:23 [INFO] Processing batch 12/28
+2025-09-04 19:16:25 [INFO] Processing batch 13/28
+2025-09-04 19:16:28 [INFO] Processing batch 14/28
+2025-09-04 19:16:30 [INFO] Processing batch 15/28
+2025-09-04 19:16:33 [INFO] Processing batch 16/28
+2025-09-04 19:16:35 [INFO] Processing batch 17/28
+2025-09-04 19:16:38 [INFO] Processing batch 18/28
+2025-09-04 19:16:40 [INFO] Processing batch 19/28
+2025-09-04 19:16:43 [INFO] Processing batch 20/28
+2025-09-04 19:16:45 [INFO] Processing batch 21/28
+2025-09-04 19:16:47 [INFO] Processing batch 22/28
+2025-09-04 19:16:50 [INFO] Processing batch 23/28
+2025-09-04 19:16:53 [INFO] Processing batch 24/28
+2025-09-04 19:16:56 [INFO] Processing batch 25/28
+2025-09-04 19:16:59 [INFO] Processing batch 26/28
+2025-09-04 19:17:02 [INFO] Processing batch 27/28
+2025-09-04 19:17:04 [INFO] Processing batch 28/28
+2025-09-04 19:17:05 [INFO] Classification complete. Processed 273463 data points.
+2025-09-04 19:17:05 [INFO] Creating output DataFrame...
+2025-09-04 19:17:05 [INFO] Creating output dataset...
+2025-09-04 19:17:05 [INFO] Creating output dataset with shape: (681, 841)
+2025-09-04 19:17:20 [INFO] Saving output to NetCDF...
+2025-09-04 19:17:20 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/3_months/offset-1/2025-08_outlook_3month.nc
+2025-09-04 19:17:20 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/3_months/offset-1/2025-08_outlook_3month.nc
+2025-09-04 19:17:20 [INFO] Value counts for 3-month average outlook:
+2025-09-04 19:17:20 [INFO] Value counts:
+2025-09-04 19:17:20 [INFO]   Value: 1.0, Count: 266771
+2025-09-04 19:17:20 [INFO]   Value: 2.0, Count: 690
+2025-09-04 19:17:20 [INFO]   Value: 3.0, Count: 2823
+2025-09-04 19:17:20 [INFO]   Value: 4.0, Count: 3169
+2025-09-04 19:17:20 [INFO]   Value: 5.0, Count: 10
+2025-09-04 19:17:20 [INFO] Generating 1_month drought outlook map...
+2025-09-04 19:17:21 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2025-09-04 19:17:23 [INFO] Saving map to /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-08.jpg
+2025-09-04 19:17:27 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-08.jpg
+2025-09-04 19:17:27 [INFO] Generating 3_months drought outlook map...
+2025-09-04 19:17:28 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2025-09-04 19:17:29 [INFO] Saving map to /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-08.jpg
+2025-09-04 19:17:32 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-08.jpg
+2025-09-04 19:17:32 [INFO] Generating rainfall forecast map...
+2025-09-04 19:17:36 [INFO] Rainfall forecast map saved: /Volumes/data/do/static/result/maps/forecast/offset-1/rainfall-forecast_2025-08.jpg
+2025-09-04 19:17:36 [INFO] Drought monitoring and outlook generation completed.
+2025-09-07 18:44:38 [INFO] Pathos available for parallel processing
+2025-09-07 18:44:39 [INFO] Starting drought monitoring and outlook generation...
+2025-09-07 18:44:39 [INFO] Found 1 forecast files:
+2025-09-07 18:44:39 [INFO]  0: p_atmos_q5_pr_s_maq5_pumedian_20250901_rt.nc
+2025-09-07 18:44:39 [INFO] 
+===== Processing file 1/1: p_atmos_q5_pr_s_maq5_pumedian_20250901_rt.nc =====
+2025-09-07 18:44:39 [INFO] Loading CDI data...
+2025-09-07 18:44:39 [INFO] Loading NetCDF file: /Volumes/data/nacp/results/netcdf/cdi_1.nc
+2025-09-07 18:44:39 [INFO] Preprocessing CDI data...
+2025-09-07 18:44:39 [INFO] Loading rainfall forecast data...
+2025-09-07 18:44:39 [INFO] Loading NetCDF file: /Volumes/data/do/static/file/p_atmos_q5_pr_s_maq5_pumedian_20250901_rt.nc
+2025-09-07 18:44:39 [INFO] Preprocessing rainfall data...
+2025-09-07 18:44:39 [INFO] Finding appropriate CDI time index...
+2025-09-07 18:44:39 [INFO] Finding CDI time index for target date: 2025-08
+2025-09-07 18:44:39 [INFO] First available CDI date: 1998-04
+2025-09-07 18:44:39 [INFO] Last available CDI date: 2025-08
+2025-09-07 18:44:39 [INFO] Found exact match at index 322: 2025-08
+2025-09-07 18:44:39 [INFO] 
+================================================================================
+2025-09-07 18:44:39 [INFO] CALCULATION DETAILS:
+2025-09-07 18:44:39 [INFO] Rain forecast file: p_atmos_q5_pr_s_maq5_pumedian_20250901_rt.nc
+2025-09-07 18:44:39 [INFO] Rain forecast date: 2025-09
+2025-09-07 18:44:39 [INFO] CDI offset applied: -1 months
+2025-09-07 18:44:39 [INFO] CDI date used: 2025-08 (index 322)
+2025-09-07 18:44:39 [INFO] Output 1-month: 2025-09_outlook_1month.nc
+2025-09-07 18:44:39 [INFO] Output 3-month: 2025-09_outlook_3month.nc
+2025-09-07 18:44:39 [INFO] ================================================================================
+
+2025-09-07 18:44:39 [INFO] Extracting CDI data slice...
+2025-09-07 18:44:44 [INFO] Extracting data slice from cdi, shape: (681, 841, 323)
+2025-09-07 18:44:44 [INFO] Using time index 322 for 3D data
+2025-09-07 18:44:44 [INFO] Creating CDI DataFrame...
+2025-09-07 18:44:44 [INFO] Creating dataframe from grid data, shape: (681, 841)
+2025-09-07 18:44:44 [INFO] Created dataframe with 572721 rows
+2025-09-07 18:44:44 [INFO] 
+=== Processing 1-month outlook ===
+2025-09-07 18:44:44 [INFO] Extracting data slice from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2025-09-07 18:44:44 [INFO] Using bin 1, time index 0 for 4D data
+2025-09-07 18:44:44 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2025-09-07 18:44:44 [INFO] Created dataframe with 612226 rows
+2025-09-07 18:44:44 [INFO] Processing 1-month outlook
+2025-09-07 18:44:44 [INFO] CDI DataFrame shape: (572721, 3)
+2025-09-07 18:44:44 [INFO] Rain DataFrame shape: (612226, 3)
+2025-09-07 18:44:44 [INFO] Merging dataframes...
+2025-09-07 18:44:44 [INFO] Merged DataFrame shape: (572721, 4)
+2025-09-07 18:44:44 [INFO] Dropping NaN values...
+2025-09-07 18:44:44 [INFO] DataFrame after dropping NaNs: (273578, 4)
+2025-09-07 18:44:44 [INFO] Classifying drought conditions...
+2025-09-07 18:44:44 [INFO] Processing batch 1/28
+2025-09-07 18:44:46 [INFO] Processing batch 2/28
+2025-09-07 18:44:49 [INFO] Processing batch 3/28
+2025-09-07 18:44:51 [INFO] Processing batch 4/28
+2025-09-07 18:44:54 [INFO] Processing batch 5/28
+2025-09-07 18:44:56 [INFO] Processing batch 6/28
+2025-09-07 18:44:59 [INFO] Processing batch 7/28
+2025-09-07 18:45:01 [INFO] Processing batch 8/28
+2025-09-07 18:45:04 [INFO] Processing batch 9/28
+2025-09-07 18:45:06 [INFO] Processing batch 10/28
+2025-09-07 18:45:09 [INFO] Processing batch 11/28
+2025-09-07 18:45:11 [INFO] Processing batch 12/28
+2025-09-07 18:45:14 [INFO] Processing batch 13/28
+2025-09-07 18:45:16 [INFO] Processing batch 14/28
+2025-09-07 18:45:19 [INFO] Processing batch 15/28
+2025-09-07 18:45:21 [INFO] Processing batch 16/28
+2025-09-07 18:45:23 [INFO] Processing batch 17/28
+2025-09-07 18:45:26 [INFO] Processing batch 18/28
+2025-09-07 18:45:28 [INFO] Processing batch 19/28
+2025-09-07 18:45:31 [INFO] Processing batch 20/28
+2025-09-07 18:45:33 [INFO] Processing batch 21/28
+2025-09-07 18:45:36 [INFO] Processing batch 22/28
+2025-09-07 18:45:38 [INFO] Processing batch 23/28
+2025-09-07 18:45:40 [INFO] Processing batch 24/28
+2025-09-07 18:45:43 [INFO] Processing batch 25/28
+2025-09-07 18:45:45 [INFO] Processing batch 26/28
+2025-09-07 18:45:48 [INFO] Processing batch 27/28
+2025-09-07 18:45:50 [INFO] Processing batch 28/28
+2025-09-07 18:45:51 [INFO] Classification complete. Processed 273578 data points.
+2025-09-07 18:45:51 [INFO] Creating output DataFrame...
+2025-09-07 18:45:51 [INFO] Creating output dataset...
+2025-09-07 18:45:51 [INFO] Creating output dataset with shape: (681, 841)
+2025-09-07 18:46:03 [INFO] Saving output to NetCDF...
+2025-09-07 18:46:03 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/1_months/offset-1/2025-09_outlook_1month.nc
+2025-09-07 18:46:03 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/1_months/offset-1/2025-09_outlook_1month.nc
+2025-09-07 18:46:03 [INFO] Value counts for 1-month outlook:
+2025-09-07 18:46:03 [INFO] Value counts:
+2025-09-07 18:46:03 [INFO]   Value: 1.0, Count: 262990
+2025-09-07 18:46:03 [INFO]   Value: 2.0, Count: 58
+2025-09-07 18:46:03 [INFO]   Value: 3.0, Count: 4966
+2025-09-07 18:46:03 [INFO]   Value: 4.0, Count: 5531
+2025-09-07 18:46:03 [INFO]   Value: 5.0, Count: 33
+2025-09-07 18:46:03 [INFO] 
+=== Processing 3-month outlook ===
+2025-09-07 18:46:03 [INFO] Calculating 3-month average from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2025-09-07 18:46:03 [INFO] Taking average of first three time slices
+2025-09-07 18:46:03 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2025-09-07 18:46:03 [INFO] Created dataframe with 612226 rows
+2025-09-07 18:46:03 [INFO] Processing 3-month average outlook
+2025-09-07 18:46:03 [INFO] CDI DataFrame shape: (572721, 3)
+2025-09-07 18:46:03 [INFO] Rain DataFrame shape: (612226, 3)
+2025-09-07 18:46:03 [INFO] Merging dataframes...
+2025-09-07 18:46:03 [INFO] Merged DataFrame shape: (572721, 4)
+2025-09-07 18:46:03 [INFO] Dropping NaN values...
+2025-09-07 18:46:03 [INFO] DataFrame after dropping NaNs: (273578, 4)
+2025-09-07 18:46:03 [INFO] Classifying drought conditions...
+2025-09-07 18:46:03 [INFO] Processing batch 1/28
+2025-09-07 18:46:06 [INFO] Processing batch 2/28
+2025-09-07 18:46:08 [INFO] Processing batch 3/28
+2025-09-07 18:46:10 [INFO] Processing batch 4/28
+2025-09-07 18:46:13 [INFO] Processing batch 5/28
+2025-09-07 18:46:15 [INFO] Processing batch 6/28
+2025-09-07 18:46:18 [INFO] Processing batch 7/28
+2025-09-07 18:46:20 [INFO] Processing batch 8/28
+2025-09-07 18:46:23 [INFO] Processing batch 9/28
+2025-09-07 18:46:25 [INFO] Processing batch 10/28
+2025-09-07 18:46:28 [INFO] Processing batch 11/28
+2025-09-07 18:46:30 [INFO] Processing batch 12/28
+2025-09-07 18:46:32 [INFO] Processing batch 13/28
+2025-09-07 18:46:35 [INFO] Processing batch 14/28
+2025-09-07 18:46:37 [INFO] Processing batch 15/28
+2025-09-07 18:46:40 [INFO] Processing batch 16/28
+2025-09-07 18:46:42 [INFO] Processing batch 17/28
+2025-09-07 18:46:45 [INFO] Processing batch 18/28
+2025-09-07 18:46:47 [INFO] Processing batch 19/28
+2025-09-07 18:46:50 [INFO] Processing batch 20/28
+2025-09-07 18:46:52 [INFO] Processing batch 21/28
+2025-09-07 18:46:54 [INFO] Processing batch 22/28
+2025-09-07 18:46:57 [INFO] Processing batch 23/28
+2025-09-07 18:46:59 [INFO] Processing batch 24/28
+2025-09-07 18:47:02 [INFO] Processing batch 25/28
+2025-09-07 18:47:04 [INFO] Processing batch 26/28
+2025-09-07 18:47:07 [INFO] Processing batch 27/28
+2025-09-07 18:47:09 [INFO] Processing batch 28/28
+2025-09-07 18:47:10 [INFO] Classification complete. Processed 273578 data points.
+2025-09-07 18:47:10 [INFO] Creating output DataFrame...
+2025-09-07 18:47:10 [INFO] Creating output dataset...
+2025-09-07 18:47:10 [INFO] Creating output dataset with shape: (681, 841)
+2025-09-07 18:47:22 [INFO] Saving output to NetCDF...
+2025-09-07 18:47:22 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/3_months/offset-1/2025-09_outlook_3month.nc
+2025-09-07 18:47:22 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/3_months/offset-1/2025-09_outlook_3month.nc
+2025-09-07 18:47:22 [INFO] Value counts for 3-month average outlook:
+2025-09-07 18:47:22 [INFO] Value counts:
+2025-09-07 18:47:22 [INFO]   Value: 1.0, Count: 265783
+2025-09-07 18:47:22 [INFO]   Value: 2.0, Count: 310
+2025-09-07 18:47:22 [INFO]   Value: 3.0, Count: 2285
+2025-09-07 18:47:22 [INFO]   Value: 4.0, Count: 5200
+2025-09-07 18:47:22 [INFO] Generating 1_month drought outlook map...
+2025-09-07 18:47:22 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2025-09-07 18:47:23 [INFO] Saving map to /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-09.jpg
+2025-09-07 18:47:26 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-09.jpg
+2025-09-07 18:47:26 [INFO] Generating 3_months drought outlook map...
+2025-09-07 18:47:26 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2025-09-07 18:47:27 [INFO] Saving map to /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-09.jpg
+2025-09-07 18:47:30 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-09.jpg
+2025-09-07 18:47:30 [INFO] Generating rainfall forecast map...
+2025-09-07 18:47:34 [INFO] Rainfall forecast map saved: /Volumes/data/do/static/result/maps/forecast/offset-1/rainfall-forecast_2025-09.jpg
+2025-09-07 18:47:34 [INFO] Drought monitoring and outlook generation completed.
+2025-10-21 11:45:32 [INFO] Pathos available for parallel processing
+2025-10-21 11:45:32 [INFO] Starting drought monitoring and outlook generation...
+2025-10-21 11:45:32 [INFO] Found 1 forecast files:
+2025-10-21 11:45:32 [INFO]  0: p_atmos_q5_pr_s_maq5_pumedian_20251001_rt.nc
+2025-10-21 11:45:32 [INFO] 
+===== Processing file 1/1: p_atmos_q5_pr_s_maq5_pumedian_20251001_rt.nc =====
+2025-10-21 11:45:32 [INFO] Loading CDI data...
+2025-10-21 11:45:32 [INFO] Loading NetCDF file: /Volumes/data/nacp/results/netcdf/cdi_1.nc
+2025-10-21 11:45:36 [INFO] Preprocessing CDI data...
+2025-10-21 11:45:36 [INFO] Loading rainfall forecast data...
+2025-10-21 11:45:36 [INFO] Loading NetCDF file: /Volumes/data/do/static/file/p_atmos_q5_pr_s_maq5_pumedian_20251001_rt.nc
+2025-10-21 11:45:36 [INFO] Preprocessing rainfall data...
+2025-10-21 11:45:36 [INFO] Finding appropriate CDI time index...
+2025-10-21 11:45:36 [INFO] Finding CDI time index for target date: 2025-09
+2025-10-21 11:45:36 [INFO] First available CDI date: 1998-04
+2025-10-21 11:45:36 [INFO] Last available CDI date: 2025-09
+2025-10-21 11:45:36 [INFO] Found exact match at index 323: 2025-09
+2025-10-21 11:45:36 [INFO] 
+================================================================================
+2025-10-21 11:45:36 [INFO] CALCULATION DETAILS:
+2025-10-21 11:45:36 [INFO] Rain forecast file: p_atmos_q5_pr_s_maq5_pumedian_20251001_rt.nc
+2025-10-21 11:45:36 [INFO] Rain forecast date: 2025-10
+2025-10-21 11:45:36 [INFO] CDI offset applied: -1 months
+2025-10-21 11:45:36 [INFO] CDI date used: 2025-09 (index 323)
+2025-10-21 11:45:36 [INFO] Output 1-month: 2025-10_outlook_1month.nc
+2025-10-21 11:45:36 [INFO] Output 3-month: 2025-10_outlook_3month.nc
+2025-10-21 11:45:36 [INFO] ================================================================================
+
+2025-10-21 11:45:36 [INFO] Extracting CDI data slice...
+2025-10-21 11:45:40 [INFO] Extracting data slice from cdi, shape: (681, 841, 324)
+2025-10-21 11:45:40 [INFO] Using time index 323 for 3D data
+2025-10-21 11:45:40 [INFO] Creating CDI DataFrame...
+2025-10-21 11:45:40 [INFO] Creating dataframe from grid data, shape: (681, 841)
+2025-10-21 11:45:40 [INFO] Created dataframe with 572721 rows
+2025-10-21 11:45:40 [INFO] 
+=== Processing 1-month outlook ===
+2025-10-21 11:45:40 [INFO] Extracting data slice from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2025-10-21 11:45:40 [INFO] Using bin 1, time index 0 for 4D data
+2025-10-21 11:45:40 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2025-10-21 11:45:40 [INFO] Created dataframe with 612226 rows
+2025-10-21 11:45:40 [INFO] Processing 1-month outlook
+2025-10-21 11:45:40 [INFO] CDI DataFrame shape: (572721, 3)
+2025-10-21 11:45:40 [INFO] Rain DataFrame shape: (612226, 3)
+2025-10-21 11:45:40 [INFO] Merging dataframes...
+2025-10-21 11:45:40 [INFO] Merged DataFrame shape: (572721, 4)
+2025-10-21 11:45:40 [INFO] Dropping NaN values...
+2025-10-21 11:45:40 [INFO] DataFrame after dropping NaNs: (273604, 4)
+2025-10-21 11:45:40 [INFO] Classifying drought conditions...
+2025-10-21 11:45:40 [INFO] Processing batch 1/28
+2025-10-21 11:45:43 [INFO] Processing batch 2/28
+2025-10-21 11:45:45 [INFO] Processing batch 3/28
+2025-10-21 11:45:48 [INFO] Processing batch 4/28
+2025-10-21 11:45:50 [INFO] Processing batch 5/28
+2025-10-21 11:45:53 [INFO] Processing batch 6/28
+2025-10-21 11:45:55 [INFO] Processing batch 7/28
+2025-10-21 11:45:57 [INFO] Processing batch 8/28
+2025-10-21 11:46:00 [INFO] Processing batch 9/28
+2025-10-21 11:46:02 [INFO] Processing batch 10/28
+2025-10-21 11:46:05 [INFO] Processing batch 11/28
+2025-10-21 11:46:07 [INFO] Processing batch 12/28
+2025-10-21 11:46:10 [INFO] Processing batch 13/28
+2025-10-21 11:46:12 [INFO] Processing batch 14/28
+2025-10-21 11:46:15 [INFO] Processing batch 15/28
+2025-10-21 11:46:17 [INFO] Processing batch 16/28
+2025-10-21 11:46:20 [INFO] Processing batch 17/28
+2025-10-21 11:46:22 [INFO] Processing batch 18/28
+2025-10-21 11:46:25 [INFO] Processing batch 19/28
+2025-10-21 11:46:27 [INFO] Processing batch 20/28
+2025-10-21 11:46:30 [INFO] Processing batch 21/28
+2025-10-21 11:46:32 [INFO] Processing batch 22/28
+2025-10-21 11:46:34 [INFO] Processing batch 23/28
+2025-10-21 11:46:37 [INFO] Processing batch 24/28
+2025-10-21 11:46:39 [INFO] Processing batch 25/28
+2025-10-21 11:46:42 [INFO] Processing batch 26/28
+2025-10-21 11:46:44 [INFO] Processing batch 27/28
+2025-10-21 11:46:47 [INFO] Processing batch 28/28
+2025-10-21 11:46:48 [INFO] Classification complete. Processed 273604 data points.
+2025-10-21 11:46:48 [INFO] Creating output DataFrame...
+2025-10-21 11:46:48 [INFO] Creating output dataset...
+2025-10-21 11:46:48 [INFO] Creating output dataset with shape: (681, 841)
+2025-10-21 11:46:59 [INFO] Saving output to NetCDF...
+2025-10-21 11:46:59 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/1_months/offset-1/2025-10_outlook_1month.nc
+2025-10-21 11:47:01 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/1_months/offset-1/2025-10_outlook_1month.nc
+2025-10-21 11:47:01 [INFO] Value counts for 1-month outlook:
+2025-10-21 11:47:01 [INFO] Value counts:
+2025-10-21 11:47:01 [INFO]   Value: 1.0, Count: 255751
+2025-10-21 11:47:01 [INFO]   Value: 2.0, Count: 49
+2025-10-21 11:47:01 [INFO]   Value: 3.0, Count: 1686
+2025-10-21 11:47:01 [INFO]   Value: 4.0, Count: 16064
+2025-10-21 11:47:01 [INFO]   Value: 5.0, Count: 54
+2025-10-21 11:47:01 [INFO] 
+=== Processing 3-month outlook ===
+2025-10-21 11:47:01 [INFO] Calculating 3-month average from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2025-10-21 11:47:01 [INFO] Taking average of first three time slices
+2025-10-21 11:47:01 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2025-10-21 11:47:01 [INFO] Created dataframe with 612226 rows
+2025-10-21 11:47:01 [INFO] Processing 3-month average outlook
+2025-10-21 11:47:01 [INFO] CDI DataFrame shape: (572721, 3)
+2025-10-21 11:47:01 [INFO] Rain DataFrame shape: (612226, 3)
+2025-10-21 11:47:01 [INFO] Merging dataframes...
+2025-10-21 11:47:01 [INFO] Merged DataFrame shape: (572721, 4)
+2025-10-21 11:47:01 [INFO] Dropping NaN values...
+2025-10-21 11:47:01 [INFO] DataFrame after dropping NaNs: (273604, 4)
+2025-10-21 11:47:01 [INFO] Classifying drought conditions...
+2025-10-21 11:47:01 [INFO] Processing batch 1/28
+2025-10-21 11:47:03 [INFO] Processing batch 2/28
+2025-10-21 11:47:06 [INFO] Processing batch 3/28
+2025-10-21 11:47:08 [INFO] Processing batch 4/28
+2025-10-21 11:47:10 [INFO] Processing batch 5/28
+2025-10-21 11:47:13 [INFO] Processing batch 6/28
+2025-10-21 11:47:15 [INFO] Processing batch 7/28
+2025-10-21 11:47:18 [INFO] Processing batch 8/28
+2025-10-21 11:47:20 [INFO] Processing batch 9/28
+2025-10-21 11:47:22 [INFO] Processing batch 10/28
+2025-10-21 11:47:25 [INFO] Processing batch 11/28
+2025-10-21 11:47:27 [INFO] Processing batch 12/28
+2025-10-21 11:47:29 [INFO] Processing batch 13/28
+2025-10-21 11:47:32 [INFO] Processing batch 14/28
+2025-10-21 11:47:34 [INFO] Processing batch 15/28
+2025-10-21 11:47:36 [INFO] Processing batch 16/28
+2025-10-21 11:47:39 [INFO] Processing batch 17/28
+2025-10-21 11:47:41 [INFO] Processing batch 18/28
+2025-10-21 11:47:43 [INFO] Processing batch 19/28
+2025-10-21 11:47:46 [INFO] Processing batch 20/28
+2025-10-21 11:47:48 [INFO] Processing batch 21/28
+2025-10-21 11:47:50 [INFO] Processing batch 22/28
+2025-10-21 11:47:53 [INFO] Processing batch 23/28
+2025-10-21 11:47:55 [INFO] Processing batch 24/28
+2025-10-21 11:47:57 [INFO] Processing batch 25/28
+2025-10-21 11:48:00 [INFO] Processing batch 26/28
+2025-10-21 11:48:02 [INFO] Processing batch 27/28
+2025-10-21 11:48:04 [INFO] Processing batch 28/28
+2025-10-21 11:48:05 [INFO] Classification complete. Processed 273604 data points.
+2025-10-21 11:48:05 [INFO] Creating output DataFrame...
+2025-10-21 11:48:05 [INFO] Creating output dataset...
+2025-10-21 11:48:05 [INFO] Creating output dataset with shape: (681, 841)
+2025-10-21 11:48:17 [INFO] Saving output to NetCDF...
+2025-10-21 11:48:17 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/3_months/offset-1/2025-10_outlook_3month.nc
+2025-10-21 11:48:17 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/3_months/offset-1/2025-10_outlook_3month.nc
+2025-10-21 11:48:17 [INFO] Value counts for 3-month average outlook:
+2025-10-21 11:48:17 [INFO] Value counts:
+2025-10-21 11:48:17 [INFO]   Value: 1.0, Count: 256276
+2025-10-21 11:48:17 [INFO]   Value: 2.0, Count: 4
+2025-10-21 11:48:17 [INFO]   Value: 3.0, Count: 1160
+2025-10-21 11:48:17 [INFO]   Value: 4.0, Count: 16154
+2025-10-21 11:48:17 [INFO]   Value: 5.0, Count: 10
+2025-10-21 11:48:17 [INFO] Generating 1_month drought outlook map...
+2025-10-21 11:48:17 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2025-10-21 11:48:19 [INFO] Saving map to /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-10.jpg
+2025-10-21 11:48:21 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-10.jpg
+2025-10-21 11:48:21 [INFO] Generating 3_months drought outlook map...
+2025-10-21 11:48:21 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2025-10-21 11:48:23 [INFO] Saving map to /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-10.jpg
+2025-10-21 11:48:25 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-10.jpg
+2025-10-21 11:48:25 [INFO] Generating rainfall forecast map...
+2025-10-21 11:48:29 [INFO] Rainfall forecast map saved: /Volumes/data/do/static/result/maps/forecast/offset-1/rainfall-forecast_2025-10.jpg
+2025-10-21 11:48:29 [INFO] Drought monitoring and outlook generation completed.
+2025-11-06 16:02:22 [INFO] Pathos available for parallel processing
+2025-11-06 16:02:22 [INFO] Starting drought monitoring and outlook generation...
+2025-11-06 16:02:22 [INFO] Found 1 forecast files:
+2025-11-06 16:02:22 [INFO]  0: p_atmos_q5_pr_s_maq5_pumedian_20251101_rt.nc
+2025-11-06 16:02:22 [INFO] 
+===== Processing file 1/1: p_atmos_q5_pr_s_maq5_pumedian_20251101_rt.nc =====
+2025-11-06 16:02:22 [INFO] Loading CDI data...
+2025-11-06 16:02:22 [INFO] Loading NetCDF file: /Volumes/data/nacp/results/netcdf/cdi_1.nc
+2025-11-06 16:02:24 [INFO] Preprocessing CDI data...
+2025-11-06 16:02:24 [INFO] Loading rainfall forecast data...
+2025-11-06 16:02:24 [INFO] Loading NetCDF file: /Volumes/data/do/static/file/p_atmos_q5_pr_s_maq5_pumedian_20251101_rt.nc
+2025-11-06 16:02:24 [INFO] Preprocessing rainfall data...
+2025-11-06 16:02:24 [INFO] Finding appropriate CDI time index...
+2025-11-06 16:02:24 [INFO] Finding CDI time index for target date: 2025-10
+2025-11-06 16:02:24 [INFO] First available CDI date: 1998-04
+2025-11-06 16:02:24 [INFO] Last available CDI date: 2025-10
+2025-11-06 16:02:24 [INFO] Found exact match at index 324: 2025-10
+2025-11-06 16:02:24 [INFO] 
+================================================================================
+2025-11-06 16:02:24 [INFO] CALCULATION DETAILS:
+2025-11-06 16:02:24 [INFO] Rain forecast file: p_atmos_q5_pr_s_maq5_pumedian_20251101_rt.nc
+2025-11-06 16:02:24 [INFO] Rain forecast date: 2025-11
+2025-11-06 16:02:24 [INFO] CDI offset applied: -1 months
+2025-11-06 16:02:24 [INFO] CDI date used: 2025-10 (index 324)
+2025-11-06 16:02:24 [INFO] Output 1-month: 2025-11_outlook_1month.nc
+2025-11-06 16:02:24 [INFO] Output 3-month: 2025-11_outlook_3month.nc
+2025-11-06 16:02:24 [INFO] ================================================================================
+
+2025-11-06 16:02:24 [INFO] Extracting CDI data slice...
+2025-11-06 16:02:28 [INFO] Extracting data slice from cdi, shape: (681, 841, 325)
+2025-11-06 16:02:28 [INFO] Using time index 324 for 3D data
+2025-11-06 16:02:28 [INFO] Creating CDI DataFrame...
+2025-11-06 16:02:28 [INFO] Creating dataframe from grid data, shape: (681, 841)
+2025-11-06 16:02:28 [INFO] Created dataframe with 572721 rows
+2025-11-06 16:02:28 [INFO] 
+=== Processing 1-month outlook ===
+2025-11-06 16:02:28 [INFO] Extracting data slice from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2025-11-06 16:02:28 [INFO] Using bin 1, time index 0 for 4D data
+2025-11-06 16:02:28 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2025-11-06 16:02:28 [INFO] Created dataframe with 612226 rows
+2025-11-06 16:02:28 [INFO] Processing 1-month outlook
+2025-11-06 16:02:28 [INFO] CDI DataFrame shape: (572721, 3)
+2025-11-06 16:02:28 [INFO] Rain DataFrame shape: (612226, 3)
+2025-11-06 16:02:28 [INFO] Merging dataframes...
+2025-11-06 16:02:28 [INFO] Merged DataFrame shape: (572721, 4)
+2025-11-06 16:02:28 [INFO] Dropping NaN values...
+2025-11-06 16:02:28 [INFO] DataFrame after dropping NaNs: (273635, 4)
+2025-11-06 16:02:28 [INFO] Classifying drought conditions...
+2025-11-06 16:02:28 [INFO] Processing batch 1/28
+2025-11-06 16:02:30 [INFO] Processing batch 2/28
+2025-11-06 16:02:33 [INFO] Processing batch 3/28
+2025-11-06 16:02:35 [INFO] Processing batch 4/28
+2025-11-06 16:02:38 [INFO] Processing batch 5/28
+2025-11-06 16:02:40 [INFO] Processing batch 6/28
+2025-11-06 16:02:43 [INFO] Processing batch 7/28
+2025-11-06 16:02:45 [INFO] Processing batch 8/28
+2025-11-06 16:02:47 [INFO] Processing batch 9/28
+2025-11-06 16:02:50 [INFO] Processing batch 10/28
+2025-11-06 16:02:52 [INFO] Processing batch 11/28
+2025-11-06 16:02:55 [INFO] Processing batch 12/28
+2025-11-06 16:02:57 [INFO] Processing batch 13/28
+2025-11-06 16:03:00 [INFO] Processing batch 14/28
+2025-11-06 16:03:02 [INFO] Processing batch 15/28
+2025-11-06 16:03:04 [INFO] Processing batch 16/28
+2025-11-06 16:03:07 [INFO] Processing batch 17/28
+2025-11-06 16:03:09 [INFO] Processing batch 18/28
+2025-11-06 16:03:12 [INFO] Processing batch 19/28
+2025-11-06 16:03:14 [INFO] Processing batch 20/28
+2025-11-06 16:03:16 [INFO] Processing batch 21/28
+2025-11-06 16:03:19 [INFO] Processing batch 22/28
+2025-11-06 16:03:21 [INFO] Processing batch 23/28
+2025-11-06 16:03:24 [INFO] Processing batch 24/28
+2025-11-06 16:03:26 [INFO] Processing batch 25/28
+2025-11-06 16:03:29 [INFO] Processing batch 26/28
+2025-11-06 16:03:31 [INFO] Processing batch 27/28
+2025-11-06 16:03:33 [INFO] Processing batch 28/28
+2025-11-06 16:03:34 [INFO] Classification complete. Processed 273635 data points.
+2025-11-06 16:03:34 [INFO] Creating output DataFrame...
+2025-11-06 16:03:34 [INFO] Creating output dataset...
+2025-11-06 16:03:34 [INFO] Creating output dataset with shape: (681, 841)
+2025-11-06 16:03:46 [INFO] Saving output to NetCDF...
+2025-11-06 16:03:46 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/1_months/offset-1/2025-11_outlook_1month.nc
+2025-11-06 16:03:47 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/1_months/offset-1/2025-11_outlook_1month.nc
+2025-11-06 16:03:47 [INFO] Value counts for 1-month outlook:
+2025-11-06 16:03:47 [INFO] Value counts:
+2025-11-06 16:03:47 [INFO]   Value: 1.0, Count: 249274
+2025-11-06 16:03:47 [INFO]   Value: 3.0, Count: 1695
+2025-11-06 16:03:47 [INFO]   Value: 4.0, Count: 22554
+2025-11-06 16:03:47 [INFO]   Value: 5.0, Count: 112
+2025-11-06 16:03:47 [INFO] 
+=== Processing 3-month outlook ===
+2025-11-06 16:03:47 [INFO] Calculating 3-month average from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2025-11-06 16:03:47 [INFO] Taking average of first three time slices
+2025-11-06 16:03:47 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2025-11-06 16:03:47 [INFO] Created dataframe with 612226 rows
+2025-11-06 16:03:47 [INFO] Processing 3-month average outlook
+2025-11-06 16:03:47 [INFO] CDI DataFrame shape: (572721, 3)
+2025-11-06 16:03:47 [INFO] Rain DataFrame shape: (612226, 3)
+2025-11-06 16:03:47 [INFO] Merging dataframes...
+2025-11-06 16:03:47 [INFO] Merged DataFrame shape: (572721, 4)
+2025-11-06 16:03:47 [INFO] Dropping NaN values...
+2025-11-06 16:03:47 [INFO] DataFrame after dropping NaNs: (273635, 4)
+2025-11-06 16:03:47 [INFO] Classifying drought conditions...
+2025-11-06 16:03:47 [INFO] Processing batch 1/28
+2025-11-06 16:03:49 [INFO] Processing batch 2/28
+2025-11-06 16:03:52 [INFO] Processing batch 3/28
+2025-11-06 16:03:54 [INFO] Processing batch 4/28
+2025-11-06 16:03:57 [INFO] Processing batch 5/28
+2025-11-06 16:03:59 [INFO] Processing batch 6/28
+2025-11-06 16:04:01 [INFO] Processing batch 7/28
+2025-11-06 16:04:04 [INFO] Processing batch 8/28
+2025-11-06 16:04:06 [INFO] Processing batch 9/28
+2025-11-06 16:04:09 [INFO] Processing batch 10/28
+2025-11-06 16:04:11 [INFO] Processing batch 11/28
+2025-11-06 16:04:14 [INFO] Processing batch 12/28
+2025-11-06 16:04:16 [INFO] Processing batch 13/28
+2025-11-06 16:04:19 [INFO] Processing batch 14/28
+2025-11-06 16:04:21 [INFO] Processing batch 15/28
+2025-11-06 16:04:23 [INFO] Processing batch 16/28
+2025-11-06 16:04:26 [INFO] Processing batch 17/28
+2025-11-06 16:04:28 [INFO] Processing batch 18/28
+2025-11-06 16:04:31 [INFO] Processing batch 19/28
+2025-11-06 16:04:33 [INFO] Processing batch 20/28
+2025-11-06 16:04:36 [INFO] Processing batch 21/28
+2025-11-06 16:04:38 [INFO] Processing batch 22/28
+2025-11-06 16:04:40 [INFO] Processing batch 23/28
+2025-11-06 16:04:43 [INFO] Processing batch 24/28
+2025-11-06 16:04:45 [INFO] Processing batch 25/28
+2025-11-06 16:04:48 [INFO] Processing batch 26/28
+2025-11-06 16:04:50 [INFO] Processing batch 27/28
+2025-11-06 16:04:53 [INFO] Processing batch 28/28
+2025-11-06 16:04:54 [INFO] Classification complete. Processed 273635 data points.
+2025-11-06 16:04:54 [INFO] Creating output DataFrame...
+2025-11-06 16:04:54 [INFO] Creating output dataset...
+2025-11-06 16:04:54 [INFO] Creating output dataset with shape: (681, 841)
+2025-11-06 16:05:05 [INFO] Saving output to NetCDF...
+2025-11-06 16:05:05 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/3_months/offset-1/2025-11_outlook_3month.nc
+2025-11-06 16:05:05 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/3_months/offset-1/2025-11_outlook_3month.nc
+2025-11-06 16:05:05 [INFO] Value counts for 3-month average outlook:
+2025-11-06 16:05:05 [INFO] Value counts:
+2025-11-06 16:05:05 [INFO]   Value: 1.0, Count: 249891
+2025-11-06 16:05:05 [INFO]   Value: 3.0, Count: 1078
+2025-11-06 16:05:05 [INFO]   Value: 4.0, Count: 22665
+2025-11-06 16:05:05 [INFO]   Value: 5.0, Count: 1
+2025-11-06 16:05:05 [INFO] Generating 1_month drought outlook map...
+2025-11-06 16:05:05 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2025-11-06 16:05:07 [INFO] Saving map to /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-11.jpg
+2025-11-06 16:05:09 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-11.jpg
+2025-11-06 16:05:09 [INFO] Generating 3_months drought outlook map...
+2025-11-06 16:05:09 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2025-11-06 16:05:11 [INFO] Saving map to /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-11.jpg
+2025-11-06 16:05:13 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-11.jpg
+2025-11-06 16:05:13 [INFO] Generating rainfall forecast map...
+2025-11-06 16:05:17 [INFO] Rainfall forecast map saved: /Volumes/data/do/static/result/maps/forecast/offset-1/rainfall-forecast_2025-11.jpg
+2025-11-06 16:05:17 [INFO] Drought monitoring and outlook generation completed.
+2026-01-21 14:44:53 [INFO] Pathos available for parallel processing
+2026-01-21 14:44:53 [INFO] Starting drought monitoring and outlook generation...
+2026-01-21 14:44:53 [INFO] Found 2 forecast files:
+2026-01-21 14:44:53 [INFO]  0: p_atmos_q5_pr_s_maq5_pumedian_20251201_rt.nc
+2026-01-21 14:44:53 [INFO]  1: p_atmos_q5_pr_s_maq5_pumedian_20251225_rt.nc
+2026-01-21 14:44:53 [INFO] 
+===== Processing file 1/2: p_atmos_q5_pr_s_maq5_pumedian_20251201_rt.nc =====
+2026-01-21 14:44:53 [INFO] Loading CDI data...
+2026-01-21 14:44:53 [INFO] Loading NetCDF file: /Volumes/data/nacp/results/netcdf/cdi_1.nc
+2026-01-21 14:44:56 [INFO] Preprocessing CDI data...
+2026-01-21 14:44:56 [INFO] Loading rainfall forecast data...
+2026-01-21 14:44:56 [INFO] Loading NetCDF file: /Volumes/data/do/static/file/p_atmos_q5_pr_s_maq5_pumedian_20251201_rt.nc
+2026-01-21 14:44:56 [INFO] Preprocessing rainfall data...
+2026-01-21 14:44:56 [INFO] Finding appropriate CDI time index...
+2026-01-21 14:44:56 [INFO] Finding CDI time index for target date: 2025-11
+2026-01-21 14:44:56 [INFO] First available CDI date: 1998-04
+2026-01-21 14:44:56 [INFO] Last available CDI date: 2025-12
+2026-01-21 14:44:56 [INFO] Found exact match at index 325: 2025-11
+2026-01-21 14:44:56 [INFO] 
+================================================================================
+2026-01-21 14:44:56 [INFO] CALCULATION DETAILS:
+2026-01-21 14:44:56 [INFO] Rain forecast file: p_atmos_q5_pr_s_maq5_pumedian_20251201_rt.nc
+2026-01-21 14:44:56 [INFO] Rain forecast date: 2025-12
+2026-01-21 14:44:56 [INFO] CDI offset applied: -1 months
+2026-01-21 14:44:56 [INFO] CDI date used: 2025-11 (index 325)
+2026-01-21 14:44:56 [INFO] Output 1-month: 2025-12_outlook_1month.nc
+2026-01-21 14:44:56 [INFO] Output 3-month: 2025-12_outlook_3month.nc
+2026-01-21 14:44:56 [INFO] ================================================================================
+
+2026-01-21 14:44:56 [INFO] Extracting CDI data slice...
+2026-01-21 14:45:01 [INFO] Extracting data slice from cdi, shape: (681, 841, 327)
+2026-01-21 14:45:01 [INFO] Using time index 325 for 3D data
+2026-01-21 14:45:01 [INFO] Creating CDI DataFrame...
+2026-01-21 14:45:01 [INFO] Creating dataframe from grid data, shape: (681, 841)
+2026-01-21 14:45:01 [INFO] Created dataframe with 572721 rows
+2026-01-21 14:45:01 [INFO] 
+=== Processing 1-month outlook ===
+2026-01-21 14:45:01 [INFO] Extracting data slice from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2026-01-21 14:45:01 [INFO] Using bin 1, time index 0 for 4D data
+2026-01-21 14:45:01 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2026-01-21 14:45:01 [INFO] Created dataframe with 612226 rows
+2026-01-21 14:45:01 [INFO] Processing 1-month outlook
+2026-01-21 14:45:01 [INFO] CDI DataFrame shape: (572721, 3)
+2026-01-21 14:45:01 [INFO] Rain DataFrame shape: (612226, 3)
+2026-01-21 14:45:01 [INFO] Merging dataframes...
+2026-01-21 14:45:01 [INFO] Merged DataFrame shape: (572721, 4)
+2026-01-21 14:45:01 [INFO] Dropping NaN values...
+2026-01-21 14:45:01 [INFO] DataFrame after dropping NaNs: (273649, 4)
+2026-01-21 14:45:01 [INFO] Classifying drought conditions...
+2026-01-21 14:45:01 [INFO] Processing batch 1/28
+2026-01-21 14:45:04 [INFO] Processing batch 2/28
+2026-01-21 14:45:06 [INFO] Processing batch 3/28
+2026-01-21 14:45:09 [INFO] Processing batch 4/28
+2026-01-21 14:45:11 [INFO] Processing batch 5/28
+2026-01-21 14:45:13 [INFO] Processing batch 6/28
+2026-01-21 14:45:16 [INFO] Processing batch 7/28
+2026-01-21 14:45:18 [INFO] Processing batch 8/28
+2026-01-21 14:45:21 [INFO] Processing batch 9/28
+2026-01-21 14:45:23 [INFO] Processing batch 10/28
+2026-01-21 14:45:25 [INFO] Processing batch 11/28
+2026-01-21 14:45:28 [INFO] Processing batch 12/28
+2026-01-21 14:45:30 [INFO] Processing batch 13/28
+2026-01-21 14:45:32 [INFO] Processing batch 14/28
+2026-01-21 14:45:35 [INFO] Processing batch 15/28
+2026-01-21 14:45:37 [INFO] Processing batch 16/28
+2026-01-21 14:45:40 [INFO] Processing batch 17/28
+2026-01-21 14:45:42 [INFO] Processing batch 18/28
+2026-01-21 14:45:44 [INFO] Processing batch 19/28
+2026-01-21 14:45:47 [INFO] Processing batch 20/28
+2026-01-21 14:45:49 [INFO] Processing batch 21/28
+2026-01-21 14:45:52 [INFO] Processing batch 22/28
+2026-01-21 14:45:54 [INFO] Processing batch 23/28
+2026-01-21 14:45:56 [INFO] Processing batch 24/28
+2026-01-21 14:45:59 [INFO] Processing batch 25/28
+2026-01-21 14:46:01 [INFO] Processing batch 26/28
+2026-01-21 14:46:04 [INFO] Processing batch 27/28
+2026-01-21 14:46:06 [INFO] Processing batch 28/28
+2026-01-21 14:46:07 [INFO] Classification complete. Processed 273649 data points.
+2026-01-21 14:46:07 [INFO] Creating output DataFrame...
+2026-01-21 14:46:07 [INFO] Creating output dataset...
+2026-01-21 14:46:07 [INFO] Creating output dataset with shape: (681, 841)
+2026-01-21 14:46:19 [INFO] Saving output to NetCDF...
+2026-01-21 14:46:19 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/1_months/offset-1/2025-12_outlook_1month.nc
+2026-01-21 14:46:20 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/1_months/offset-1/2025-12_outlook_1month.nc
+2026-01-21 14:46:20 [INFO] Value counts for 1-month outlook:
+2026-01-21 14:46:20 [INFO] Value counts:
+2026-01-21 14:46:20 [INFO]   Value: 1.0, Count: 90530
+2026-01-21 14:46:20 [INFO]   Value: 3.0, Count: 166354
+2026-01-21 14:46:20 [INFO]   Value: 4.0, Count: 16722
+2026-01-21 14:46:20 [INFO]   Value: 5.0, Count: 43
+2026-01-21 14:46:20 [INFO] 
+=== Processing 3-month outlook ===
+2026-01-21 14:46:20 [INFO] Calculating 3-month average from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2026-01-21 14:46:20 [INFO] Taking average of first three time slices
+2026-01-21 14:46:20 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2026-01-21 14:46:20 [INFO] Created dataframe with 612226 rows
+2026-01-21 14:46:20 [INFO] Processing 3-month average outlook
+2026-01-21 14:46:20 [INFO] CDI DataFrame shape: (572721, 3)
+2026-01-21 14:46:20 [INFO] Rain DataFrame shape: (612226, 3)
+2026-01-21 14:46:20 [INFO] Merging dataframes...
+2026-01-21 14:46:20 [INFO] Merged DataFrame shape: (572721, 4)
+2026-01-21 14:46:20 [INFO] Dropping NaN values...
+2026-01-21 14:46:20 [INFO] DataFrame after dropping NaNs: (273649, 4)
+2026-01-21 14:46:20 [INFO] Classifying drought conditions...
+2026-01-21 14:46:20 [INFO] Processing batch 1/28
+2026-01-21 14:46:22 [INFO] Processing batch 2/28
+2026-01-21 14:46:25 [INFO] Processing batch 3/28
+2026-01-21 14:46:27 [INFO] Processing batch 4/28
+2026-01-21 14:46:29 [INFO] Processing batch 5/28
+2026-01-21 14:46:32 [INFO] Processing batch 6/28
+2026-01-21 14:46:34 [INFO] Processing batch 7/28
+2026-01-21 14:46:37 [INFO] Processing batch 8/28
+2026-01-21 14:46:39 [INFO] Processing batch 9/28
+2026-01-21 14:46:42 [INFO] Processing batch 10/28
+2026-01-21 14:46:44 [INFO] Processing batch 11/28
+2026-01-21 14:46:46 [INFO] Processing batch 12/28
+2026-01-21 14:46:49 [INFO] Processing batch 13/28
+2026-01-21 14:46:51 [INFO] Processing batch 14/28
+2026-01-21 14:46:53 [INFO] Processing batch 15/28
+2026-01-21 14:46:56 [INFO] Processing batch 16/28
+2026-01-21 14:46:58 [INFO] Processing batch 17/28
+2026-01-21 14:47:01 [INFO] Processing batch 18/28
+2026-01-21 14:47:03 [INFO] Processing batch 19/28
+2026-01-21 14:47:06 [INFO] Processing batch 20/28
+2026-01-21 14:47:08 [INFO] Processing batch 21/28
+2026-01-21 14:47:10 [INFO] Processing batch 22/28
+2026-01-21 14:47:13 [INFO] Processing batch 23/28
+2026-01-21 14:47:15 [INFO] Processing batch 24/28
+2026-01-21 14:47:18 [INFO] Processing batch 25/28
+2026-01-21 14:47:20 [INFO] Processing batch 26/28
+2026-01-21 14:47:22 [INFO] Processing batch 27/28
+2026-01-21 14:47:25 [INFO] Processing batch 28/28
+2026-01-21 14:47:26 [INFO] Classification complete. Processed 273649 data points.
+2026-01-21 14:47:26 [INFO] Creating output DataFrame...
+2026-01-21 14:47:26 [INFO] Creating output dataset...
+2026-01-21 14:47:26 [INFO] Creating output dataset with shape: (681, 841)
+2026-01-21 14:47:37 [INFO] Saving output to NetCDF...
+2026-01-21 14:47:37 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/3_months/offset-1/2025-12_outlook_3month.nc
+2026-01-21 14:47:37 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/3_months/offset-1/2025-12_outlook_3month.nc
+2026-01-21 14:47:37 [INFO] Value counts for 3-month average outlook:
+2026-01-21 14:47:37 [INFO] Value counts:
+2026-01-21 14:47:37 [INFO]   Value: 1.0, Count: 255906
+2026-01-21 14:47:37 [INFO]   Value: 3.0, Count: 978
+2026-01-21 14:47:37 [INFO]   Value: 4.0, Count: 16722
+2026-01-21 14:47:37 [INFO]   Value: 5.0, Count: 43
+2026-01-21 14:47:37 [INFO] Generating 1_month drought outlook map...
+2026-01-21 14:47:37 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2026-01-21 14:47:39 [INFO] Saving map to /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-12.jpg
+2026-01-21 14:47:41 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-12.jpg
+2026-01-21 14:47:41 [INFO] Generating 3_months drought outlook map...
+2026-01-21 14:47:41 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2026-01-21 14:47:43 [INFO] Saving map to /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-12.jpg
+2026-01-21 14:47:45 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-12.jpg
+2026-01-21 14:47:45 [INFO] Generating rainfall forecast map...
+2026-01-21 14:47:49 [INFO] Rainfall forecast map saved: /Volumes/data/do/static/result/maps/forecast/offset-1/rainfall-forecast_2025-12.jpg
+2026-01-21 14:47:49 [INFO] 
+===== Processing file 2/2: p_atmos_q5_pr_s_maq5_pumedian_20251225_rt.nc =====
+2026-01-21 14:47:49 [INFO] Loading CDI data...
+2026-01-21 14:47:49 [INFO] Loading NetCDF file: /Volumes/data/nacp/results/netcdf/cdi_1.nc
+2026-01-21 14:47:49 [INFO] Preprocessing CDI data...
+2026-01-21 14:47:49 [INFO] Loading rainfall forecast data...
+2026-01-21 14:47:49 [INFO] Loading NetCDF file: /Volumes/data/do/static/file/p_atmos_q5_pr_s_maq5_pumedian_20251225_rt.nc
+2026-01-21 14:47:49 [INFO] Preprocessing rainfall data...
+2026-01-21 14:47:49 [INFO] Finding appropriate CDI time index...
+2026-01-21 14:47:49 [INFO] Finding CDI time index for target date: 2025-12
+2026-01-21 14:47:49 [INFO] First available CDI date: 1998-04
+2026-01-21 14:47:49 [INFO] Last available CDI date: 2025-12
+2026-01-21 14:47:49 [INFO] Found exact match at index 326: 2025-12
+2026-01-21 14:47:49 [INFO] 
+================================================================================
+2026-01-21 14:47:49 [INFO] CALCULATION DETAILS:
+2026-01-21 14:47:49 [INFO] Rain forecast file: p_atmos_q5_pr_s_maq5_pumedian_20251225_rt.nc
+2026-01-21 14:47:49 [INFO] Rain forecast date: 2026-01
+2026-01-21 14:47:49 [INFO] CDI offset applied: -1 months
+2026-01-21 14:47:49 [INFO] CDI date used: 2025-12 (index 326)
+2026-01-21 14:47:49 [INFO] Output 1-month: 2025-12_outlook_1month.nc
+2026-01-21 14:47:49 [INFO] Output 3-month: 2025-12_outlook_3month.nc
+2026-01-21 14:47:49 [INFO] ================================================================================
+
+2026-01-21 14:47:49 [INFO] Extracting CDI data slice...
+2026-01-21 14:47:53 [INFO] Extracting data slice from cdi, shape: (681, 841, 327)
+2026-01-21 14:47:53 [INFO] Using time index 326 for 3D data
+2026-01-21 14:47:53 [INFO] Creating CDI DataFrame...
+2026-01-21 14:47:53 [INFO] Creating dataframe from grid data, shape: (681, 841)
+2026-01-21 14:47:53 [INFO] Created dataframe with 572721 rows
+2026-01-21 14:47:53 [INFO] 
+=== Processing 1-month outlook ===
+2026-01-21 14:47:53 [INFO] Extracting data slice from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2026-01-21 14:47:53 [INFO] Using bin 1, time index 0 for 4D data
+2026-01-21 14:47:53 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2026-01-21 14:47:53 [INFO] Created dataframe with 612226 rows
+2026-01-21 14:47:53 [INFO] Processing 1-month outlook
+2026-01-21 14:47:53 [INFO] CDI DataFrame shape: (572721, 3)
+2026-01-21 14:47:53 [INFO] Rain DataFrame shape: (612226, 3)
+2026-01-21 14:47:53 [INFO] Merging dataframes...
+2026-01-21 14:47:53 [INFO] Merged DataFrame shape: (572721, 4)
+2026-01-21 14:47:53 [INFO] Dropping NaN values...
+2026-01-21 14:47:53 [INFO] DataFrame after dropping NaNs: (273648, 4)
+2026-01-21 14:47:53 [INFO] Classifying drought conditions...
+2026-01-21 14:47:53 [INFO] Processing batch 1/28
+2026-01-21 14:47:56 [INFO] Processing batch 2/28
+2026-01-21 14:47:58 [INFO] Processing batch 3/28
+2026-01-21 14:48:00 [INFO] Processing batch 4/28
+2026-01-21 14:48:03 [INFO] Processing batch 5/28
+2026-01-21 14:48:05 [INFO] Processing batch 6/28
+2026-01-21 14:48:08 [INFO] Processing batch 7/28
+2026-01-21 14:48:10 [INFO] Processing batch 8/28
+2026-01-21 14:48:12 [INFO] Processing batch 9/28
+2026-01-21 14:48:15 [INFO] Processing batch 10/28
+2026-01-21 14:48:17 [INFO] Processing batch 11/28
+2026-01-21 14:48:19 [INFO] Processing batch 12/28
+2026-01-21 14:48:22 [INFO] Processing batch 13/28
+2026-01-21 14:48:24 [INFO] Processing batch 14/28
+2026-01-21 14:48:27 [INFO] Processing batch 15/28
+2026-01-21 14:48:29 [INFO] Processing batch 16/28
+2026-01-21 14:48:31 [INFO] Processing batch 17/28
+2026-01-21 14:48:34 [INFO] Processing batch 18/28
+2026-01-21 14:48:36 [INFO] Processing batch 19/28
+2026-01-21 14:48:38 [INFO] Processing batch 20/28
+2026-01-21 14:48:41 [INFO] Processing batch 21/28
+2026-01-21 14:48:43 [INFO] Processing batch 22/28
+2026-01-21 14:48:46 [INFO] Processing batch 23/28
+2026-01-21 14:48:48 [INFO] Processing batch 24/28
+2026-01-21 14:48:51 [INFO] Processing batch 25/28
+2026-01-21 14:48:53 [INFO] Processing batch 26/28
+2026-01-21 14:48:56 [INFO] Processing batch 27/28
+2026-01-21 14:48:58 [INFO] Processing batch 28/28
+2026-01-21 14:48:59 [INFO] Classification complete. Processed 273648 data points.
+2026-01-21 14:48:59 [INFO] Creating output DataFrame...
+2026-01-21 14:48:59 [INFO] Creating output dataset...
+2026-01-21 14:48:59 [INFO] Creating output dataset with shape: (681, 841)
+2026-01-21 14:49:11 [INFO] Saving output to NetCDF...
+2026-01-21 14:49:11 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/1_months/offset-1/2025-12_outlook_1month.nc
+2026-01-21 14:49:11 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/1_months/offset-1/2025-12_outlook_1month.nc
+2026-01-21 14:49:11 [INFO] Value counts for 1-month outlook:
+2026-01-21 14:49:11 [INFO] Value counts:
+2026-01-21 14:49:11 [INFO]   Value: 1.0, Count: 220887
+2026-01-21 14:49:11 [INFO]   Value: 2.0, Count: 139
+2026-01-21 14:49:11 [INFO]   Value: 3.0, Count: 613
+2026-01-21 14:49:11 [INFO]   Value: 4.0, Count: 50518
+2026-01-21 14:49:11 [INFO]   Value: 5.0, Count: 1491
+2026-01-21 14:49:11 [INFO] 
+=== Processing 3-month outlook ===
+2026-01-21 14:49:11 [INFO] Calculating 3-month average from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2026-01-21 14:49:11 [INFO] Taking average of first three time slices
+2026-01-21 14:49:11 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2026-01-21 14:49:11 [INFO] Created dataframe with 612226 rows
+2026-01-21 14:49:11 [INFO] Processing 3-month average outlook
+2026-01-21 14:49:11 [INFO] CDI DataFrame shape: (572721, 3)
+2026-01-21 14:49:11 [INFO] Rain DataFrame shape: (612226, 3)
+2026-01-21 14:49:11 [INFO] Merging dataframes...
+2026-01-21 14:49:12 [INFO] Merged DataFrame shape: (572721, 4)
+2026-01-21 14:49:12 [INFO] Dropping NaN values...
+2026-01-21 14:49:12 [INFO] DataFrame after dropping NaNs: (273648, 4)
+2026-01-21 14:49:12 [INFO] Classifying drought conditions...
+2026-01-21 14:49:12 [INFO] Processing batch 1/28
+2026-01-21 14:49:14 [INFO] Processing batch 2/28
+2026-01-21 14:49:16 [INFO] Processing batch 3/28
+2026-01-21 14:49:19 [INFO] Processing batch 4/28
+2026-01-21 14:49:21 [INFO] Processing batch 5/28
+2026-01-21 14:49:24 [INFO] Processing batch 6/28
+2026-01-21 14:49:26 [INFO] Processing batch 7/28
+2026-01-21 14:49:29 [INFO] Processing batch 8/28
+2026-01-21 14:49:32 [INFO] Processing batch 9/28
+2026-01-21 14:49:34 [INFO] Processing batch 10/28
+2026-01-21 14:49:37 [INFO] Processing batch 11/28
+2026-01-21 14:49:40 [INFO] Processing batch 12/28
+2026-01-21 14:49:42 [INFO] Processing batch 13/28
+2026-01-21 14:49:44 [INFO] Processing batch 14/28
+2026-01-21 14:49:47 [INFO] Processing batch 15/28
+2026-01-21 14:49:49 [INFO] Processing batch 16/28
+2026-01-21 14:49:52 [INFO] Processing batch 17/28
+2026-01-21 14:49:54 [INFO] Processing batch 18/28
+2026-01-21 14:49:56 [INFO] Processing batch 19/28
+2026-01-21 14:49:59 [INFO] Processing batch 20/28
+2026-01-21 14:50:01 [INFO] Processing batch 21/28
+2026-01-21 14:50:03 [INFO] Processing batch 22/28
+2026-01-21 14:50:06 [INFO] Processing batch 23/28
+2026-01-21 14:50:08 [INFO] Processing batch 24/28
+2026-01-21 14:50:11 [INFO] Processing batch 25/28
+2026-01-21 14:50:13 [INFO] Processing batch 26/28
+2026-01-21 14:50:16 [INFO] Processing batch 27/28
+2026-01-21 14:50:19 [INFO] Processing batch 28/28
+2026-01-21 14:50:20 [INFO] Classification complete. Processed 273648 data points.
+2026-01-21 14:50:20 [INFO] Creating output DataFrame...
+2026-01-21 14:50:20 [INFO] Creating output dataset...
+2026-01-21 14:50:20 [INFO] Creating output dataset with shape: (681, 841)
+2026-01-21 14:50:32 [INFO] Saving output to NetCDF...
+2026-01-21 14:50:32 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/3_months/offset-1/2025-12_outlook_3month.nc
+2026-01-21 14:50:32 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/3_months/offset-1/2025-12_outlook_3month.nc
+2026-01-21 14:50:32 [INFO] Value counts for 3-month average outlook:
+2026-01-21 14:50:32 [INFO] Value counts:
+2026-01-21 14:50:32 [INFO]   Value: 1.0, Count: 220887
+2026-01-21 14:50:32 [INFO]   Value: 3.0, Count: 610
+2026-01-21 14:50:32 [INFO]   Value: 4.0, Count: 47701
+2026-01-21 14:50:32 [INFO]   Value: 5.0, Count: 4450
+2026-01-21 14:50:32 [INFO] Generating 1_month drought outlook map...
+2026-01-21 14:50:32 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2026-01-21 14:50:33 [INFO] Saving map to /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-12.jpg
+2026-01-21 14:50:36 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-12.jpg
+2026-01-21 14:50:36 [INFO] Generating 3_months drought outlook map...
+2026-01-21 14:50:36 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2026-01-21 14:50:37 [INFO] Saving map to /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-12.jpg
+2026-01-21 14:50:40 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-12.jpg
+2026-01-21 14:50:40 [INFO] Generating rainfall forecast map...
+2026-01-21 14:50:44 [INFO] Rainfall forecast map saved: /Volumes/data/do/static/result/maps/forecast/offset-1/rainfall-forecast_2025-12.jpg
+2026-01-21 14:50:44 [INFO] Drought monitoring and outlook generation completed.
+2026-01-21 14:51:23 [INFO] Pathos available for parallel processing
+2026-01-21 14:51:23 [INFO] Starting drought monitoring and outlook generation...
+2026-01-21 14:51:23 [INFO] Found 1 forecast files:
+2026-01-21 14:51:23 [INFO]  0: p_atmos_q5_pr_s_maq5_pumedian_20251201_rt.nc
+2026-01-21 14:51:23 [INFO] 
+===== Processing file 1/1: p_atmos_q5_pr_s_maq5_pumedian_20251201_rt.nc =====
+2026-01-21 14:51:23 [INFO] Loading CDI data...
+2026-01-21 14:51:23 [INFO] Loading NetCDF file: /Volumes/data/nacp/results/netcdf/cdi_1.nc
+2026-01-21 14:51:23 [INFO] Preprocessing CDI data...
+2026-01-21 14:51:23 [INFO] Loading rainfall forecast data...
+2026-01-21 14:51:23 [INFO] Loading NetCDF file: /Volumes/data/do/static/file/p_atmos_q5_pr_s_maq5_pumedian_20251201_rt.nc
+2026-01-21 14:51:23 [INFO] Preprocessing rainfall data...
+2026-01-21 14:51:23 [INFO] Finding appropriate CDI time index...
+2026-01-21 14:51:23 [INFO] Finding CDI time index for target date: 2025-11
+2026-01-21 14:51:23 [INFO] First available CDI date: 1998-04
+2026-01-21 14:51:23 [INFO] Last available CDI date: 2025-12
+2026-01-21 14:51:23 [INFO] Found exact match at index 325: 2025-11
+2026-01-21 14:51:23 [INFO] 
+================================================================================
+2026-01-21 14:51:23 [INFO] CALCULATION DETAILS:
+2026-01-21 14:51:23 [INFO] Rain forecast file: p_atmos_q5_pr_s_maq5_pumedian_20251201_rt.nc
+2026-01-21 14:51:23 [INFO] Rain forecast date: 2025-12
+2026-01-21 14:51:23 [INFO] CDI offset applied: -1 months
+2026-01-21 14:51:23 [INFO] CDI date used: 2025-11 (index 325)
+2026-01-21 14:51:23 [INFO] Output 1-month: 2025-12_outlook_1month.nc
+2026-01-21 14:51:23 [INFO] Output 3-month: 2025-12_outlook_3month.nc
+2026-01-21 14:51:23 [INFO] ================================================================================
+
+2026-01-21 14:51:23 [INFO] Extracting CDI data slice...
+2026-01-21 14:51:28 [INFO] Extracting data slice from cdi, shape: (681, 841, 327)
+2026-01-21 14:51:28 [INFO] Using time index 325 for 3D data
+2026-01-21 14:51:28 [INFO] Creating CDI DataFrame...
+2026-01-21 14:51:28 [INFO] Creating dataframe from grid data, shape: (681, 841)
+2026-01-21 14:51:28 [INFO] Created dataframe with 572721 rows
+2026-01-21 14:51:28 [INFO] 
+=== Processing 1-month outlook ===
+2026-01-21 14:51:28 [INFO] Extracting data slice from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2026-01-21 14:51:28 [INFO] Using bin 1, time index 0 for 4D data
+2026-01-21 14:51:28 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2026-01-21 14:51:28 [INFO] Created dataframe with 612226 rows
+2026-01-21 14:51:28 [INFO] Processing 1-month outlook
+2026-01-21 14:51:28 [INFO] CDI DataFrame shape: (572721, 3)
+2026-01-21 14:51:28 [INFO] Rain DataFrame shape: (612226, 3)
+2026-01-21 14:51:28 [INFO] Merging dataframes...
+2026-01-21 14:51:28 [INFO] Merged DataFrame shape: (572721, 4)
+2026-01-21 14:51:28 [INFO] Dropping NaN values...
+2026-01-21 14:51:28 [INFO] DataFrame after dropping NaNs: (273649, 4)
+2026-01-21 14:51:28 [INFO] Classifying drought conditions...
+2026-01-21 14:51:28 [INFO] Processing batch 1/28
+2026-01-21 14:51:31 [INFO] Processing batch 2/28
+2026-01-21 14:51:34 [INFO] Processing batch 3/28
+2026-01-21 14:51:36 [INFO] Processing batch 4/28
+2026-01-21 14:51:39 [INFO] Processing batch 5/28
+2026-01-21 14:51:41 [INFO] Processing batch 6/28
+2026-01-21 14:51:44 [INFO] Processing batch 7/28
+2026-01-21 14:51:47 [INFO] Processing batch 8/28
+2026-01-21 14:51:49 [INFO] Processing batch 9/28
+2026-01-21 14:51:52 [INFO] Processing batch 10/28
+2026-01-21 14:51:54 [INFO] Processing batch 11/28
+2026-01-21 14:51:56 [INFO] Processing batch 12/28
+2026-01-21 14:51:59 [INFO] Processing batch 13/28
+2026-01-21 14:52:01 [INFO] Processing batch 14/28
+2026-01-21 14:52:04 [INFO] Processing batch 15/28
+2026-01-21 14:52:06 [INFO] Processing batch 16/28
+2026-01-21 14:52:08 [INFO] Processing batch 17/28
+2026-01-21 14:52:11 [INFO] Processing batch 18/28
+2026-01-21 14:52:13 [INFO] Processing batch 19/28
+2026-01-21 14:52:16 [INFO] Processing batch 20/28
+2026-01-21 14:52:18 [INFO] Processing batch 21/28
+2026-01-21 14:52:21 [INFO] Processing batch 22/28
+2026-01-21 14:52:23 [INFO] Processing batch 23/28
+2026-01-21 14:52:25 [INFO] Processing batch 24/28
+2026-01-21 14:52:28 [INFO] Processing batch 25/28
+2026-01-21 14:52:30 [INFO] Processing batch 26/28
+2026-01-21 14:52:33 [INFO] Processing batch 27/28
+2026-01-21 14:52:35 [INFO] Processing batch 28/28
+2026-01-21 14:52:36 [INFO] Classification complete. Processed 273649 data points.
+2026-01-21 14:52:36 [INFO] Creating output DataFrame...
+2026-01-21 14:52:36 [INFO] Creating output dataset...
+2026-01-21 14:52:36 [INFO] Creating output dataset with shape: (681, 841)
+2026-01-21 14:52:48 [INFO] Saving output to NetCDF...
+2026-01-21 14:52:48 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/1_months/offset-1/2025-12_outlook_1month.nc
+2026-01-21 14:52:48 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/1_months/offset-1/2025-12_outlook_1month.nc
+2026-01-21 14:52:48 [INFO] Value counts for 1-month outlook:
+2026-01-21 14:52:48 [INFO] Value counts:
+2026-01-21 14:52:48 [INFO]   Value: 1.0, Count: 90530
+2026-01-21 14:52:48 [INFO]   Value: 3.0, Count: 166354
+2026-01-21 14:52:48 [INFO]   Value: 4.0, Count: 16722
+2026-01-21 14:52:48 [INFO]   Value: 5.0, Count: 43
+2026-01-21 14:52:48 [INFO] 
+=== Processing 3-month outlook ===
+2026-01-21 14:52:48 [INFO] Calculating 3-month average from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2026-01-21 14:52:48 [INFO] Taking average of first three time slices
+2026-01-21 14:52:48 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2026-01-21 14:52:48 [INFO] Created dataframe with 612226 rows
+2026-01-21 14:52:48 [INFO] Processing 3-month average outlook
+2026-01-21 14:52:48 [INFO] CDI DataFrame shape: (572721, 3)
+2026-01-21 14:52:48 [INFO] Rain DataFrame shape: (612226, 3)
+2026-01-21 14:52:48 [INFO] Merging dataframes...
+2026-01-21 14:52:48 [INFO] Merged DataFrame shape: (572721, 4)
+2026-01-21 14:52:48 [INFO] Dropping NaN values...
+2026-01-21 14:52:48 [INFO] DataFrame after dropping NaNs: (273649, 4)
+2026-01-21 14:52:48 [INFO] Classifying drought conditions...
+2026-01-21 14:52:48 [INFO] Processing batch 1/28
+2026-01-21 14:52:50 [INFO] Processing batch 2/28
+2026-01-21 14:52:53 [INFO] Processing batch 3/28
+2026-01-21 14:52:55 [INFO] Processing batch 4/28
+2026-01-21 14:52:57 [INFO] Processing batch 5/28
+2026-01-21 14:53:00 [INFO] Processing batch 6/28
+2026-01-21 14:53:02 [INFO] Processing batch 7/28
+2026-01-21 14:53:04 [INFO] Processing batch 8/28
+2026-01-21 14:53:07 [INFO] Processing batch 9/28
+2026-01-21 14:53:09 [INFO] Processing batch 10/28
+2026-01-21 14:53:12 [INFO] Processing batch 11/28
+2026-01-21 14:53:14 [INFO] Processing batch 12/28
+2026-01-21 14:53:16 [INFO] Processing batch 13/28
+2026-01-21 14:53:19 [INFO] Processing batch 14/28
+2026-01-21 14:53:21 [INFO] Processing batch 15/28
+2026-01-21 14:53:23 [INFO] Processing batch 16/28
+2026-01-21 14:53:26 [INFO] Processing batch 17/28
+2026-01-21 14:53:28 [INFO] Processing batch 18/28
+2026-01-21 14:53:31 [INFO] Processing batch 19/28
+2026-01-21 14:53:33 [INFO] Processing batch 20/28
+2026-01-21 14:53:36 [INFO] Processing batch 21/28
+2026-01-21 14:53:38 [INFO] Processing batch 22/28
+2026-01-21 14:53:41 [INFO] Processing batch 23/28
+2026-01-21 14:53:43 [INFO] Processing batch 24/28
+2026-01-21 14:53:45 [INFO] Processing batch 25/28
+2026-01-21 14:53:48 [INFO] Processing batch 26/28
+2026-01-21 14:53:50 [INFO] Processing batch 27/28
+2026-01-21 14:53:53 [INFO] Processing batch 28/28
+2026-01-21 14:53:54 [INFO] Classification complete. Processed 273649 data points.
+2026-01-21 14:53:54 [INFO] Creating output DataFrame...
+2026-01-21 14:53:54 [INFO] Creating output dataset...
+2026-01-21 14:53:54 [INFO] Creating output dataset with shape: (681, 841)
+2026-01-21 14:54:06 [INFO] Saving output to NetCDF...
+2026-01-21 14:54:06 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/3_months/offset-1/2025-12_outlook_3month.nc
+2026-01-21 14:54:06 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/3_months/offset-1/2025-12_outlook_3month.nc
+2026-01-21 14:54:06 [INFO] Value counts for 3-month average outlook:
+2026-01-21 14:54:06 [INFO] Value counts:
+2026-01-21 14:54:06 [INFO]   Value: 1.0, Count: 255906
+2026-01-21 14:54:06 [INFO]   Value: 3.0, Count: 978
+2026-01-21 14:54:06 [INFO]   Value: 4.0, Count: 16722
+2026-01-21 14:54:06 [INFO]   Value: 5.0, Count: 43
+2026-01-21 14:54:06 [INFO] Generating 1_month drought outlook map...
+2026-01-21 14:54:06 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2026-01-21 14:54:08 [INFO] Saving map to /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-12.jpg
+2026-01-21 14:54:10 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-12.jpg
+2026-01-21 14:54:10 [INFO] Generating 3_months drought outlook map...
+2026-01-21 14:54:10 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2026-01-21 14:54:12 [INFO] Saving map to /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-12.jpg
+2026-01-21 14:54:14 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-12.jpg
+2026-01-21 14:54:14 [INFO] Generating rainfall forecast map...
+2026-01-21 14:54:18 [INFO] Rainfall forecast map saved: /Volumes/data/do/static/result/maps/forecast/offset-1/rainfall-forecast_2025-12.jpg
+2026-01-21 14:54:18 [INFO] Drought monitoring and outlook generation completed.
+2026-01-21 14:56:51 [INFO] Pathos available for parallel processing
+2026-01-21 14:56:51 [INFO] Starting drought monitoring and outlook generation...
+2026-01-21 14:56:51 [INFO] Found 1 forecast files:
+2026-01-21 14:56:51 [INFO]  0: p_atmos_q5_pr_s_maq5_pumedian_20251225_rt.nc
+2026-01-21 14:56:51 [INFO] 
+===== Processing file 1/1: p_atmos_q5_pr_s_maq5_pumedian_20251225_rt.nc =====
+2026-01-21 14:56:51 [INFO] Loading CDI data...
+2026-01-21 14:56:51 [INFO] Loading NetCDF file: /Volumes/data/nacp/results/netcdf/cdi_1.nc
+2026-01-21 14:56:51 [INFO] Preprocessing CDI data...
+2026-01-21 14:56:51 [INFO] Loading rainfall forecast data...
+2026-01-21 14:56:51 [INFO] Loading NetCDF file: /Volumes/data/do/static/file/p_atmos_q5_pr_s_maq5_pumedian_20251225_rt.nc
+2026-01-21 14:56:51 [INFO] Preprocessing rainfall data...
+2026-01-21 14:56:51 [INFO] Finding appropriate CDI time index...
+2026-01-21 14:56:51 [INFO] Finding CDI time index for target date: 2025-12
+2026-01-21 14:56:51 [INFO] First available CDI date: 1998-04
+2026-01-21 14:56:51 [INFO] Last available CDI date: 2025-12
+2026-01-21 14:56:51 [INFO] Found exact match at index 326: 2025-12
+2026-01-21 14:56:51 [INFO] 
+================================================================================
+2026-01-21 14:56:51 [INFO] CALCULATION DETAILS:
+2026-01-21 14:56:51 [INFO] Rain forecast file: p_atmos_q5_pr_s_maq5_pumedian_20251225_rt.nc
+2026-01-21 14:56:51 [INFO] Rain forecast date: 2026-01
+2026-01-21 14:56:51 [INFO] CDI offset applied: -1 months
+2026-01-21 14:56:51 [INFO] CDI date used: 2025-12 (index 326)
+2026-01-21 14:56:51 [INFO] Output 1-month: 2025-12_outlook_1month.nc
+2026-01-21 14:56:51 [INFO] Output 3-month: 2025-12_outlook_3month.nc
+2026-01-21 14:56:51 [INFO] ================================================================================
+
+2026-01-21 14:56:51 [INFO] Extracting CDI data slice...
+2026-01-21 14:56:56 [INFO] Extracting data slice from cdi, shape: (681, 841, 327)
+2026-01-21 14:56:56 [INFO] Using time index 326 for 3D data
+2026-01-21 14:56:56 [INFO] Creating CDI DataFrame...
+2026-01-21 14:56:56 [INFO] Creating dataframe from grid data, shape: (681, 841)
+2026-01-21 14:56:56 [INFO] Created dataframe with 572721 rows
+2026-01-21 14:56:56 [INFO] 
+=== Processing 1-month outlook ===
+2026-01-21 14:56:56 [INFO] Extracting data slice from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2026-01-21 14:56:56 [INFO] Using bin 1, time index 0 for 4D data
+2026-01-21 14:56:56 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2026-01-21 14:56:56 [INFO] Created dataframe with 612226 rows
+2026-01-21 14:56:56 [INFO] Processing 1-month outlook
+2026-01-21 14:56:56 [INFO] CDI DataFrame shape: (572721, 3)
+2026-01-21 14:56:56 [INFO] Rain DataFrame shape: (612226, 3)
+2026-01-21 14:56:56 [INFO] Merging dataframes...
+2026-01-21 14:56:56 [INFO] Merged DataFrame shape: (572721, 4)
+2026-01-21 14:56:56 [INFO] Dropping NaN values...
+2026-01-21 14:56:56 [INFO] DataFrame after dropping NaNs: (273648, 4)
+2026-01-21 14:56:56 [INFO] Classifying drought conditions...
+2026-01-21 14:56:56 [INFO] Processing batch 1/28
+2026-01-21 14:56:59 [INFO] Processing batch 2/28
+2026-01-21 14:57:01 [INFO] Processing batch 3/28
+2026-01-21 14:57:03 [INFO] Processing batch 4/28
+2026-01-21 14:57:06 [INFO] Processing batch 5/28
+2026-01-21 14:57:08 [INFO] Processing batch 6/28
+2026-01-21 14:57:11 [INFO] Processing batch 7/28
+2026-01-21 14:57:13 [INFO] Processing batch 8/28
+2026-01-21 14:57:15 [INFO] Processing batch 9/28
+2026-01-21 14:57:18 [INFO] Processing batch 10/28
+2026-01-21 14:57:20 [INFO] Processing batch 11/28
+2026-01-21 14:57:23 [INFO] Processing batch 12/28
+2026-01-21 14:57:25 [INFO] Processing batch 13/28
+2026-01-21 14:57:27 [INFO] Processing batch 14/28
+2026-01-21 14:57:30 [INFO] Processing batch 15/28
+2026-01-21 14:57:32 [INFO] Processing batch 16/28
+2026-01-21 14:57:34 [INFO] Processing batch 17/28
+2026-01-21 14:57:37 [INFO] Processing batch 18/28
+2026-01-21 14:57:39 [INFO] Processing batch 19/28
+2026-01-21 14:57:41 [INFO] Processing batch 20/28
+2026-01-21 14:57:44 [INFO] Processing batch 21/28
+2026-01-21 14:57:46 [INFO] Processing batch 22/28
+2026-01-21 14:57:49 [INFO] Processing batch 23/28
+2026-01-21 14:57:51 [INFO] Processing batch 24/28
+2026-01-21 14:57:54 [INFO] Processing batch 25/28
+2026-01-21 14:57:56 [INFO] Processing batch 26/28
+2026-01-21 14:57:58 [INFO] Processing batch 27/28
+2026-01-21 14:58:01 [INFO] Processing batch 28/28
+2026-01-21 14:58:02 [INFO] Classification complete. Processed 273648 data points.
+2026-01-21 14:58:02 [INFO] Creating output DataFrame...
+2026-01-21 14:58:02 [INFO] Creating output dataset...
+2026-01-21 14:58:02 [INFO] Creating output dataset with shape: (681, 841)
+2026-01-21 14:58:13 [INFO] Saving output to NetCDF...
+2026-01-21 14:58:13 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/1_months/offset-1/2025-12_outlook_1month.nc
+2026-01-21 14:58:13 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/1_months/offset-1/2025-12_outlook_1month.nc
+2026-01-21 14:58:13 [INFO] Value counts for 1-month outlook:
+2026-01-21 14:58:13 [INFO] Value counts:
+2026-01-21 14:58:13 [INFO]   Value: 1.0, Count: 220887
+2026-01-21 14:58:13 [INFO]   Value: 2.0, Count: 139
+2026-01-21 14:58:13 [INFO]   Value: 3.0, Count: 613
+2026-01-21 14:58:13 [INFO]   Value: 4.0, Count: 50518
+2026-01-21 14:58:13 [INFO]   Value: 5.0, Count: 1491
+2026-01-21 14:58:13 [INFO] 
+=== Processing 3-month outlook ===
+2026-01-21 14:58:13 [INFO] Calculating 3-month average from percentage_of_ensembles, shape: (2, 5, 691, 886)
+2026-01-21 14:58:13 [INFO] Taking average of first three time slices
+2026-01-21 14:58:13 [INFO] Creating dataframe from grid data, shape: (691, 886)
+2026-01-21 14:58:13 [INFO] Created dataframe with 612226 rows
+2026-01-21 14:58:13 [INFO] Processing 3-month average outlook
+2026-01-21 14:58:13 [INFO] CDI DataFrame shape: (572721, 3)
+2026-01-21 14:58:13 [INFO] Rain DataFrame shape: (612226, 3)
+2026-01-21 14:58:13 [INFO] Merging dataframes...
+2026-01-21 14:58:13 [INFO] Merged DataFrame shape: (572721, 4)
+2026-01-21 14:58:13 [INFO] Dropping NaN values...
+2026-01-21 14:58:13 [INFO] DataFrame after dropping NaNs: (273648, 4)
+2026-01-21 14:58:13 [INFO] Classifying drought conditions...
+2026-01-21 14:58:13 [INFO] Processing batch 1/28
+2026-01-21 14:58:16 [INFO] Processing batch 2/28
+2026-01-21 14:58:18 [INFO] Processing batch 3/28
+2026-01-21 14:58:21 [INFO] Processing batch 4/28
+2026-01-21 14:58:23 [INFO] Processing batch 5/28
+2026-01-21 14:58:26 [INFO] Processing batch 6/28
+2026-01-21 14:58:28 [INFO] Processing batch 7/28
+2026-01-21 14:58:30 [INFO] Processing batch 8/28
+2026-01-21 14:58:33 [INFO] Processing batch 9/28
+2026-01-21 14:58:35 [INFO] Processing batch 10/28
+2026-01-21 14:58:38 [INFO] Processing batch 11/28
+2026-01-21 14:58:40 [INFO] Processing batch 12/28
+2026-01-21 14:58:42 [INFO] Processing batch 13/28
+2026-01-21 14:58:45 [INFO] Processing batch 14/28
+2026-01-21 14:58:47 [INFO] Processing batch 15/28
+2026-01-21 14:58:49 [INFO] Processing batch 16/28
+2026-01-21 14:58:52 [INFO] Processing batch 17/28
+2026-01-21 14:58:54 [INFO] Processing batch 18/28
+2026-01-21 14:58:57 [INFO] Processing batch 19/28
+2026-01-21 14:58:59 [INFO] Processing batch 20/28
+2026-01-21 14:59:01 [INFO] Processing batch 21/28
+2026-01-21 14:59:04 [INFO] Processing batch 22/28
+2026-01-21 14:59:06 [INFO] Processing batch 23/28
+2026-01-21 14:59:09 [INFO] Processing batch 24/28
+2026-01-21 14:59:11 [INFO] Processing batch 25/28
+2026-01-21 14:59:13 [INFO] Processing batch 26/28
+2026-01-21 14:59:16 [INFO] Processing batch 27/28
+2026-01-21 14:59:18 [INFO] Processing batch 28/28
+2026-01-21 14:59:19 [INFO] Classification complete. Processed 273648 data points.
+2026-01-21 14:59:19 [INFO] Creating output DataFrame...
+2026-01-21 14:59:19 [INFO] Creating output dataset...
+2026-01-21 14:59:19 [INFO] Creating output dataset with shape: (681, 841)
+2026-01-21 14:59:31 [INFO] Saving output to NetCDF...
+2026-01-21 14:59:31 [INFO] Saving NetCDF to /Volumes/data/do/static/result/nc/3_months/offset-1/2025-12_outlook_3month.nc
+2026-01-21 14:59:31 [INFO] File saved successfully: /Volumes/data/do/static/result/nc/3_months/offset-1/2025-12_outlook_3month.nc
+2026-01-21 14:59:31 [INFO] Value counts for 3-month average outlook:
+2026-01-21 14:59:31 [INFO] Value counts:
+2026-01-21 14:59:31 [INFO]   Value: 1.0, Count: 220887
+2026-01-21 14:59:31 [INFO]   Value: 3.0, Count: 610
+2026-01-21 14:59:31 [INFO]   Value: 4.0, Count: 47701
+2026-01-21 14:59:31 [INFO]   Value: 5.0, Count: 4450
+2026-01-21 14:59:31 [INFO] Generating 1_month drought outlook map...
+2026-01-21 14:59:31 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2026-01-21 14:59:33 [INFO] Saving map to /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-12.jpg
+2026-01-21 14:59:35 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2025-12.jpg
+2026-01-21 14:59:35 [INFO] Generating 3_months drought outlook map...
+2026-01-21 14:59:35 [INFO] Adding shapefile geometries from /Volumes/data/nacp/DroughtMonitor/shapes/gadm36_AUS_1.shp
+2026-01-21 14:59:37 [INFO] Saving map to /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-12.jpg
+2026-01-21 14:59:39 [INFO] Drought outlook map saved: /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2025-12.jpg
+2026-01-21 14:59:39 [INFO] Generating rainfall forecast map...
+2026-01-21 14:59:43 [INFO] Rainfall forecast map saved: /Volumes/data/do/static/result/maps/forecast/offset-1/rainfall-forecast_2025-12.jpg
+2026-01-21 14:59:43 [INFO] Drought monitoring and outlook generation completed.
