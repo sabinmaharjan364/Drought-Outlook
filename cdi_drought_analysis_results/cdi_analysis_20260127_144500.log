@@ -1,0 +1,18 @@
+2026-01-27 14:45:00,765 - INFO - CDI Drought Analyzer initialized
+2026-01-27 14:45:00,765 - INFO - Input file: /Volumes/data/nacp/results/netcdf/cdi_1.nc
+2026-01-27 14:45:00,766 - INFO - Output directory: cdi_drought_analysis_results
+2026-01-27 14:45:00,766 - INFO - ============================================================
+2026-01-27 14:45:00,766 - INFO - STARTING CDI DROUGHT ANALYSIS
+2026-01-27 14:45:00,767 - INFO - ============================================================
+2026-01-27 14:45:00,767 - INFO - Loading NetCDF file: /Volumes/data/nacp/results/netcdf/cdi_1.nc
+2026-01-27 14:45:01,929 - INFO - Available variables in NetCDF: ['latitude', 'longitude', 'time', 'cdi']
+2026-01-27 14:45:01,930 - INFO - Available dimensions: ['latitude', 'longitude', 'time']
+2026-01-27 14:45:01,931 - INFO - Using variable: cdi
+2026-01-27 14:45:01,932 - INFO - Variable shape: (681, 841, 327)
+2026-01-27 14:45:01,932 - INFO - Variable dimensions: ('latitude', 'longitude', 'time')
+2026-01-27 14:45:01,933 - INFO - Detected dimensions - Time: latitude, Lat: longitude, Lon: time
+2026-01-27 14:45:01,935 - INFO - Time range in data: 1969-12-31 23:59:59.999999956 to 1969-12-31 23:59:59.999999990
+2026-01-27 14:45:01,938 - INFO - Filtered time range: NaT to NaT
+2026-01-27 14:45:01,938 - INFO - Final data shape: (0, 841, 327)
+2026-01-27 14:45:01,940 - INFO - Step 1: Classifying drought conditions...
+2026-01-27 14:45:01,941 - ERROR - Analysis failed with error: conflicting sizes for dimension 'longitude': length 1 on <this-array> and length 841 on {'latitude': 'latitude', 'longitude': 'longitude', 'time': 'time'}

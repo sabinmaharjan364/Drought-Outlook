@@ -175,34 +175,38 @@ def preprocess_dataset(ds, rename_dict=None):
 
 def extract_date_from_forecast_file(filepath):
     """
-    Extract date information from forecast filename.
-    
+    Extract date information from forecast file's time dimension.
+
     Args:
         filepath (str): Path to the forecast file
-        
+
     Returns:
-        datetime: Extracted date or current date if extraction fails
+        datetime: Extracted date from file's time dimension or current date if extraction fails
     """
     try:
-        # Try to extract a date-like pattern from the filename (format like *20240101*.nc with YYYYMMDD)
+        # Always read from the file's time dimension first (this is the actual forecast date)
+        ds = xr.open_dataset(filepath)
+        if 'time' in ds:
+            forecast_date = pd.to_datetime(ds.time.values[0])
+            ds.close()
+            logger.info(f"Extracted forecast date from time dimension: {forecast_date.strftime('%Y-%m-%d')}")
+            return forecast_date
+        ds.close()
+
+        # Fallback: Try to extract from filename if time dimension not available
         filename = os.path.basename(filepath)
         date_parts = [part for part in filename.split('_') if len(part) == 8 and part.isdigit()]
-        
+
         if date_parts:
             date_str = date_parts[0]
             year = int(date_str[:4])
             month = int(date_str[4:6])
             day = int(date_str[6:8])
+            logger.warning(f"Using date from filename: {year}-{month:02d}-{day:02d}")
             return datetime(year, month, day)
-        else:
-            # If no date in filename, try to get date from file content
-            ds = xr.open_dataset(filepath)
-            if 'time' in ds:
-                return pd.to_datetime(ds.time.values[0])
-            ds.close()
     except Exception as e:
         logger.error(f"Error extracting date from {filepath}: {e}")
-    
+
     # Default to current date if extraction fails
     logger.warning(f"Could not extract date from {filepath}, using current date")
     return datetime.now()
@@ -329,32 +333,34 @@ def create_dataframe(lon, lat, data, columns):
 def classify_drought(row):
     """
     Classify drought conditions based on CDI and rainfall.
-    
+    Matches R code logic exactly.
+
     Args:
         row (pandas.Series): Row containing 'cdi' and 'rain' values
-        
+
     Returns:
-        float: Classification value (1-5) or NaN on error
-        
+        float: Classification value (1-6) or NaN on error
+
     Classification values:
         1: No Drought
         2: Drought Removed
         3: Drought Improves
-        4: Drought Persists
-        5: Drought Worsens
+        4: Drought Develops
+        5: Drought Persists
+        6: Drought Worsens
     """
     try:
         cdi, rain = row['cdi'], row['rain']
-        
-        if cdi < 0.2:
+
+        if cdi <= 0.2:  # R uses <=
             if rain < 50:
-                return 5 if cdi < 0.02 else 4  # 5=Drought Worsens, 4=Drought Persists
+                return 5 if cdi <= 0.02 else 6  # R uses <=, returns 5 for persists, 6 for worsens
             elif rain < 70:
-                return 4  # Drought Persists
+                return 5  # Drought Persists
             else:
-                return 2 if 0.1 <= cdi < 0.2 else 3  # 2=Drought Removed, 3=Drought Improves
+                return 2 if (cdi > 0.1 and cdi <= 0.2) else 3  # R uses > and <=
         else:
-            return 3 if rain < 30 else 1  # 3=Drought Develops, 1=No Drought
+            return 4 if rain < 30 else 1  # 4=Drought Develops, 1=No Drought
     except Exception as e:
         logger.error(f"Error in classify_drought: {e}")
         return np.nan  # Return NaN on error
@@ -891,21 +897,25 @@ def generate_rainfall_forecast_map(ncname, shp_path, output_path):
 def process_file(file_to_process):
     """
     Process a single forecast file.
-    
+
     Args:
         file_to_process (str): Path to the forecast file to process
-        
+
     Returns:
         bool: True if successful, False otherwise
     """
     try:
-        # Extract date from filename
-        date = extract_date_from_forecast_file(file_to_process)
-        date_str = date.strftime("%Y-%m")
-        
+        # Load the NetCDF file to get the actual forecast date from the time dimension
+        logger.info(f"Loading forecast file to extract forecast date: {os.path.basename(file_to_process)}")
+        ds_temp = xr.open_dataset(file_to_process)
+        forecast_date = pd.to_datetime(ds_temp.time.values[0])
+        date_str = forecast_date.strftime("%Y-%m")
+        ds_temp.close()
+        logger.info(f"Using forecast date for filenames: {date_str}")
+
         # Create offset string for directory names
         offset_str = f"offset{CONFIG['offset']}" if CONFIG['offset'] != 0 else "current"
-        
+
         # Setup output directories and file paths
         files = setup_dirs(date_str, offset_str)
         

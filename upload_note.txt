@@ -1,0 +1,2 @@
+scp /Volumes/data/do/static/result/maps/1_months/offset-1/drought-outlook_1_2026-05.jpg u1125009@139.99.208.88:/nacp/static/drought_outlook/drought-outlook_1/ && \
+scp /Volumes/data/do/static/result/maps/3_months/offset-1/drought-outlook_3_2026-05.jpg u1125009@139.99.208.88:/nacp/static/drought_outlook/drought-outlook_3/
